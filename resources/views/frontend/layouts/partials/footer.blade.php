@@ -1,312 +1,207 @@
-<style>
-    .footer {
-        color: #424242;
-        font-size: 14px;
-        background-color: #fcfcfc;
-        -webkit-box-shadow: 2px 6px 15px 10px rgba(237, 237, 237, 1);
-        -moz-box-shadow: 2px 6px 15px 10px rgba(237, 237, 237, 1);
-        box-shadow: 2px 6px 15px 10px rgba(237, 237, 237, 1);
-    }
-
-    .footer-action-wrapper {
-        display: flex;
-    }
-
-    .footer-action-button {
-        color: #58595e;
-        text-align: center;
-    }
-
-    .footer-action-button:hover {
-        text-decoration: none;
-        color: var(--theme-accent-color)
-    }
-
-    .footer-action-button .icon {
-        padding: 10px 8px;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        margin-bottom: 5px;
-        text-align: center;
-    }
-
-    .footer-action-button:hover .icon {
-        border-color: var(--theme-accent-color);
-    }
-
-    .footer-action-button .icon svg {
-        width: 1.4rem;
-        height: 1.4rem;
-    }
-
-    .footer-action-button .label {
-        font-size: 14px;
-        font-weight: 500;
-    }
-
-    .footer-links {
-        list-style-type: none;
-        padding-left: none;
-    }
-
-    .footer-links li {
-        margin-bottom: 12px;
-    }
-
-    .footer-links a {
-        color: inherit;
-    }
-
-    .footer-links a:hover {
-        text-decoration: none;
-        color: var(--theme-accent-color);
-    }
-
-</style>
-
-<footer class="footer">
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-md-4">
-                <div>
-                    <img src="{{ siteLogoUrl() }}" alt="{{ siteName() }}" style="max-height: 70px;">
-                </div>
-                <div class="my-3"></div>
-                <div class="footer-action-wrapper">
-                    <a href="tel:{{ appSettings('mobile') }}" class="footer-action-button mr-3">
-                        <div class="icon">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                            </svg>
-                        </div>
-                        <div class="label">Call Us</div>
-                    </a>
-                    <a href="mailto:{{ appSettings('email') }}" class="footer-action-button mr-3">
-                        <div class="icon">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                        </div>
-                        <div class="label">Email Us</div>
-                    </a>
-                    <a href="{{ route('stores.index') }}" class="footer-action-button">
-                        <div class="icon">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                        </div>
-                        <div class="label">Find Us</div>
-                    </a>
-                </div>
+<svg class="h-24 w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 140" preserveAspectRatio="none" style="fill: #f7f4fb;">
+    <path d="M320 28c320 0 320 84 640 84 160 0 240-21 320-42v70H0V70c80-21 160-42 320-42z"></path>
+</svg>
+<section style="background: #f7f4fb;">
+    <div class="container mx-auto py-16 px-4">
+        <div class="grid sm:grid-cols-2 sm:grid-gap-3 z-10">
+            <div>
+                <h1 class="text-lg sm:text-2xl md:text-3xl text-indigo-900 font-bold">Subscribe to our newsletter and stay
+                    updated on the latest news</h1>
             </div>
-            <div class="col-md-2">
-                <ul class="footer-links">
-                    <li><a href="{{ route('products.index') }}">Products</a></li>
-                    <li><a href="/pages/faqs">Recipies</a></li>
-                    <li><a href="/pages/shipping-details">What's New?</a></li>
-                    <li><a href="{{ route('stores.index') }}">Find a Store</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2">
-                <ul class="footer-links">
-                    <li><a href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">About Us</a></li>
-                    <li><a href="{{ getPageUrlBySlug(appSettings('privacy_policy_page_url')) }}">Privacy Policy</a></li>
-                    <li><a href="{{ getPageUrlBySlug(appSettings('terms_and_conditions_page_url')) }}">Terms & Conditions</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <div>Stay connected with us</div>
-                <style>
-                    .subscribe-form {
-                        display: flex;
-                        align-self: center;
-                    }
-
-                    .subscribe-form input {
-                        -webkit-box-flex: 1;
-                        flex-grow: 1;
-                        padding: .9em;
-                        background: hsla(0, 0%, 46%, .1);
-                        border: none;
-                        margin: 0;
-                        -webkit-box-shadow: none;
-                        box-shadow: none;
-                    }
-
-                    .subscribe-form input:focus {
-                        outline-color: var(--theme-accent-color);
-                    }
-
-                    .subscribe-form button {
-                        border: none;
-                        -ms-flex-positive: 0;
-                        -webkit-box-flex: 0;
-                        flex-grow: 0;
-                        margin-left: -4px;
-                        margin-top: -1px;
-                        padding-left: 10px;
-                        padding-right: 10px;
-
-                        background: #e30613;
-                        color: #fff;
-                        /* border-bottom: 4px solid #80030b; */
-                        border-top-right-radius: 3px;
-                        border-bottom-right-radius: 3px;
-                    }
-
-                    .subscribe-form button:hover {
-                        background: #c10b16;
-                    }
-
-                </style>
-                <livewire:frontend.subscription-form />
-
-                <div class="mt-4">Follow us</div>
-                <style>
-                    .footer-social-links a {
-                        display: inline-flex;
-                        color: var(--theme-color);
-                        font-size: 18px;
-                        width: 35px;
-                        height: 35px;
-                        border: 2px solid var(--theme-color);
-                        border-radius: 50%;
-                        justify-content: center;
-                        margin-right: 10px;
-                    }
-                    .footer-social-links a:hover {
-                        background-color: var(--theme-color);
-                        color: #fff;
-                    }
-
-                    .footer-social-links a span {
-                        align-self: center;
-                    }
-
-                </style>
-                <div class="footer-social-links mt-3">
-                    <a href="{{ appSettings('facebook_url') }}">
-                        <span><i class="fa fa-facebook"></i></span>
-                    </a>
-                    <a href="{{ appSettings('twitter_url') }}">
-                        <span><i class="fa fa-twitter"></i></span>
-                    </a>
-                    <a href="{{ appSettings('youtube_url') }}">
-                        <span><i class="fa fa-youtube"></i></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="bg-white">
-        <div class="container text-center py-4">
-            <div class="d-flex justify-content-center">
-                <div class="align-self-center">Find the entire Better product range at:</div>
-                <a class="align-self-center d-flex  mx-2" href="">
-                    <img src="{{ asset('assets/images/daraz-logo.jpg') }}" alt="Daraz" style="max-height: 30px;">
-                </a>
-                <a class="align-self-center d-flex  mx-2" href="">
-                    <img src="{{ asset('assets/images/sastodeal-logo.jpg') }}" alt="Daraz" style="max-height: 30px;">
-                </a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
-
-
-<section class="felona-footer-area d-none">
-    <div class="footer-top-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="footer-block">
-                        <h4>Contact</h4>
-                        <div class="address">
-                            <p> No: Add 1, <br>Address-2, MD, country</p>
-                            <p class="contact_num"> <i class="fa fa-phone"></i>+977 12345678</p>
-
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-item">
-                        <h4>Contact</h4>
-                        <ul>
-                            <ul class="site-footer__links">
-
-                                <li><a href="/search">Search</a></li>
-
-                                <li><a href="/pages/faqs">Help</a></li>
-
-                                <li><a href="/pages/shipping-details">Information</a></li>
-
-                                <li><a href="/pages/contact-us">Privacy Policy</a></li>
-
-                                <li><a href="/pages/shipping-details">Shipping Delails</a></li>
-
-                            </ul>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-item">
-                        <h4>Contact</h4>
-                        <ul>
-                            <ul class="site-footer__links">
-
-                                <li><a href="/search">Search</a></li>
-
-                                <li><a href="/pages/faqs">Help</a></li>
-
-                                <li><a href="/pages/shipping-details">Information</a></li>
-
-                                <li><a href="/pages/contact-us">Privacy Policy</a></li>
-
-                                <li><a href="/pages/shipping-details">Shipping Delails</a></li>
-
-                            </ul>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="footer-item">
-                        <h4>Contact</h4>
-                        <ul>
-                            <ul class="site-footer__links">
-
-                                <li><a href="/search">Search</a></li>
-
-                                <li><a href="/pages/faqs">Help</a></li>
-
-                                <li><a href="/pages/shipping-details">Information</a></li>
-
-                                <li><a href="/pages/contact-us">Privacy Policy</a></li>
-
-                                <li><a href="/pages/shipping-details">Shipping Delails</a></li>
-
-                            </ul>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="copyright-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="copyright-left">
-                        <p>Copyright © 2021. All rights reserved.</p>
-                    </div>
-                </div>
-
+            <div>
+                <form action="" class="flex space-x-4">
+                    <input type="email" class="flex-grow py-3 px-5 text-lg font-semibold border border-gray-300 rounded-full placeholder-indigo-900 focus:outline-none" placeholder="Enter your email">
+                    <button class="py-3 px-6 font-bold tracking-wide bg-red-600 rounded-full text-white hover:bg-opacity-90">Subscribe</button>
+                </form>
             </div>
         </div>
     </div>
 </section>
+
+<footer class="font-semibold text-opacity-90" style="background-color: #f7f4fb; color: #455880;">
+    <div class="container mx-auto py-16 px-4">
+        <div class="grid sm:grid-cols-3">
+            {{-- First Column --}}
+            <div>
+                <h1 class="text-xl text-indigo-900 font-bold tracking-wide uppercase mb-4">{{ siteName() }}</h1>
+                <div>
+                    <ul class= space-y-2 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-gray-500">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.414 7l3.293-3.293a1 1 0 00-1.414-1.414L13 5.586V4a1 1 0 10-2 0v4.003a.996.996 0 00.617.921A.997.997 0 0012 9h4a1 1 0 100-2h-1.586z"></path>
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                            </span>
+                            <span>{{ appSettings('mobile') }}</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-gray-500">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                            </span>
+                            <span>{{ appSettings('email') }}</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-gray-500">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                            <span>{{ appSettings('address') }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            {{-- Second Column --}}
+            <div>
+                <h1 class="text-xl text-indigo-900 text-center font-bold tracking-wide uppercase mb-4">{{ __('Take Action') }}</h1>
+                <div>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center space-x-2 justify-center">
+                            <a href="#">Volunteer</a>
+                        </li>
+                        <li class="flex items-center space-x-2 justify-center">
+                            <a href="#">Donate</a>
+                        </li>
+                        <li class="flex items-center space-x-2 justify-center">
+                            <a href="#">Shop</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            {{-- Third Column --}}
+            <div>
+                <h1 class="text-xl text-indigo-900 text-center font-bold tracking-wide uppercase mb-4">{{ __('Follow Us') }}</h1>
+                <div>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center space-x-2 justify-center">
+                            <a href="#">Facebook</a>
+                        </li>
+                        <li class="flex items-center space-x-2 justify-center">
+                            <a href="#">Twitter</a>
+                        </li>
+                        <li class="flex items-center space-x-2 justify-center">
+                            <a href="#">Youtube</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center text-xs">
+            *Disclaimer: Dhana Yoga Foundation is a nonprofit 501(c)(3) charitable organization with EIN number 83-2193218. All contributions are tax deductible to the fullest extent allowed by law.
+        </div>
+        <div class="container mx-auto py-3 px-4 text-center text-xs">
+            Copyright © {{ date('Y') }} {{ siteName() }}. All rights reserved. <a class="hover:underline" href="#">Privacy Policy</a> - <a class="hover:underline" href="#">Cookies Policy</a> - <a class="hover:underline" href="#">Terms of Use</a> - <a class="hover:underline" href="#">Shipping & Returns</a>
+        </div>
+    </div>
+</footer>
+
+<footer class="hidden bg-gray-900 text-gray-100">
+    <div class="container mx-auto py-16 px-4">
+        <div class="grid sm:grid-cols-3">
+            {{-- First Column --}}
+            <div>
+                <h1 class="text-xl font-semibold tracking-wide uppercase mb-4">{{ siteName() }}</h1>
+                <div>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <span class="text-gray-300">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.414 7l3.293-3.293a1 1 0 00-1.414-1.414L13 5.586V4a1 1 0 10-2 0v4.003a.996.996 0 00.617.921A.997.997 0 0012 9h4a1 1 0 100-2h-1.586z"></path>
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                            </span>
+                            <span>{{ appSettings('mobile') }}</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-gray-300">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                            </span>
+                            <span>{{ appSettings('email') }}</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <span class="text-gray-300">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                            <span>{{ appSettings('address') }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            {{-- Third Column --}}
+            <div>
+                <h1 class="text-xl font-semibold tracking-wide uppercase mb-4">{{ __('Take Action') }}</h1>
+                <div>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <a href="#">Volunteer</a>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <a href="#">Donate</a>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <a href="#">Shop</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            {{-- Fourth Column --}}
+            <div>
+                <h1 class="text-xl font-semibold tracking-wide uppercase mb-4">{{ __('Spread The World') }}</h1>
+                <div>
+                    <ul class="flex space-x-3">
+                        <li>
+                            <a class="inline-flex p-2 border-2 border-gray-200 rounded-full hover:border-indigo-600 hover:text-indigo-600" href="#">
+                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="inline-flex p-2 border-2 border-gray-200 rounded-full hover:border-indigo-600 hover:text-indigo-600" href="#">
+                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="inline-flex p-2 border-2 border-gray-200 rounded-full hover:border-indigo-600 hover:text-indigo-600" href="#">
+                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mt-4">
+                        <h1 class="my-2">Subscribe to Newsletter</h1>
+                        <form action="#" class="text-gray-700">
+                            <div class="flex w-72 py-2 px-4 bg-gray-100 rounded-full overflow-hidden">
+                                <input type="email" class="bg-transparent py-2 px-5 border-none focus:outline-none" placeholder="Email">
+                                <button class="px-3 bg-gray-800 text-gray-100 rounded-full hover:bg-indigo-600">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto py-3 px-4 text-center text-xs">
+        Copyright © {{ date('Y') }} {{ siteName() }}. All rights reserved. Privacy Policy - Cookies Policy - Terms of Use - Shipping & Returns
+    </div>
+</footer>

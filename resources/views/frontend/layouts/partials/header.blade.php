@@ -1,55 +1,27 @@
-<div class="topbar-wrapper d-none d-sm-block">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <ul class="contact_info mb-0">
-                    <li>
-                        <a href="mailto:{{ appSettings('email') }}"> <i class="fa fa-envelope-o" aria-hidden="true"></i>{{ appSettings('email') }}</a>
-                    </li>
-                    <li><a href="tel:{{ appSettings('mobile') }}">
-                            <i class="fa fa-phone" aria-hidden="true"></i> Call support free: {{ appSettings('mobile') }}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-6">
-                <ul class="social mb-0">
-                    <li><a href="{{ appSettings('facebook_url') }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="{{ appSettings('twitter_url') }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="{{ appSettings('youtube_url') }}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-        </div>
+<div class="py-2 px-3 bg-gradient-to-r from-indigo-600 via-purple-500 to-blue-500 overflow-hidden" data-aos="fade-down">
+    <div class="container mx-auto flex items-center justify-center space-x-3">
+        <div class="text-sm font-medium text-white">Tony Robbins Global Youth Leadership Summit Virtual 2021 Applications Now Open!</div>
+        <span aria-hidden="true" class="hidden sm:block mx-6 h-6 w-px bg-white bg-opacity-20"></span>
+        <a class="whitespace-nowrap inline-flex rounded-md bg-white py-2 px-3 text-xs font-semibold uppercase text-blue-500 hover:bg-opacity-90" href="#">Learn More →</a>
     </div>
 </div>
-
-<header style="border-bottom: 2px dotted #e5e5e5;">
-    <nav class="navbar  navbar-expand-lg navbar-light top-navbar menu_top">
-        <div class="container" x-data="{ show: false }">
-            <a class="navbar-brand logo" href="{{ url('/') }}">
-                <img style="height: 64px;" src="{{ siteLogoUrl() }}" alt="{{ siteName() }}">
-            </a>
-            <button class="navbar-toggler" type="button" @click="show = !show">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-                @include('frontend.layouts.partials.mobile-menu')
-            <div class="collapse navbar-collapse justify-content-end">
-                <ul class="navbar-nav sub-menu">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ url('/') }}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('products.index') }}">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact-us.index') }}">Contact us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    {{-- <div style="height: 2px; background-color: #e5e5e5;"></div> --}}
+<header>
+    <div class="container mx-auto flex justify-between items-center space-x-2 py-3 px-2 lg:px-6" x-data="{ show: false }">
+        <a class="navbar-brand logo" href="{{ url('/') }}">
+            <img class="h-16" src="{{ siteLogoUrl() }}" alt="{{ siteName() }}">
+        </a>
+        <button class="sm:hidden text-gray-700" type="button" @click="show = !show">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        @include('frontend.layouts.partials.mobile-menu')
+        <nav x-show="!show" class="hidden sm:flex items-center space-x-2 text-indigo-900 font-medium tracking-wide">
+            <a class="py-2 px-3 hover:text-indigo-600" href="{{ url('/') }}">{{ __('Programs') }}</a>
+            <a class="py-2 px-3 hover:text-indigo-600" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('About Us') }}</a>
+            <a class="py-2 px-3 hover:text-indigo-600" href="{{ url('/') }}">{{ __('Volunteer') }}</a>
+            {{-- <a class="py-2 px-3 hover:text-indigo-600" href="{{ url('/') }}">{{ __('Shop') }}</a> --}}
+            <a class="py-2 px-3 bg-red-500 hover:bg-opacity-80 text-white rounded-md font-semibold " href="{{ url('/') }}">{{ __('Donate') }}</a>
+        </nav>
+    </div>
 </header>

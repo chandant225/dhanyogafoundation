@@ -11,7 +11,7 @@ return [
         'defaults'       => [
             'title'        => env('APP_NAME', 'Better Home Appliances'), // set false to total remove
             'titleBefore'  => false, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
-            'description'  => 'Make Life Better', // set false to total remove
+            'description'  => 'Dhana Yoga Foundation is a nonprofit 501(c)(3) charitable organization with EIN number 83-2193218. All contributions are tax deductible to the fullest extent allowed by law.', // set false to total remove
             'separator'    => ' - ',
             'keywords'     => [],
             'canonical'    => null, // Set null for using Url::current(), set false to total remove
@@ -37,7 +37,7 @@ return [
          */
         'defaults' => [
             'title'       => env('APP_NAME', 'Better Home Appliances'), // set false to total remove
-            'description' => 'Make Life Better', // set false to total remove
+            'description' => 'Dhana Yoga Foundation is a nonprofit 501(c)(3) charitable organization with EIN number 83-2193218. All contributions are tax deductible to the fullest extent allowed by law.', // set false to total remove
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => false,
             'site_name'   => false,
@@ -59,7 +59,7 @@ return [
          */
         'defaults' => [
             'title'       => env('APP_NAME', 'Better Home Appliances'), // set false to total remove
-            'description' => 'Make Life Better', // set false to total remove
+            'description' => 'Dhana Yoga Foundation is a nonprofit 501(c)(3) charitable organization with EIN number 83-2193218. All contributions are tax deductible to the fullest extent allowed by law.', // set false to total remove
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => 'WebPage',
             'images'      => [],

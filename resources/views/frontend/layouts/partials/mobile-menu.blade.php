@@ -1,57 +1,16 @@
-<style>
-    #mobile-menu,
-    #mobile-menu a {
-        color: var(--dark-gray);
-        color: #e0e0e0;
-    }
-
-    #mobile-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 100;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.95);
-    }
-
-    #mobile-menu .close-btn {
-        font-size: 1.4rem;
-        color: inherit;
-    }
-
-    #mobile-menu .mobile-menu-content {
-        position: relative;
-        /* top: 15%; */
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
-    }
-
-    .mobile-menu-content .menu-link {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 32px;
-        display: block;
-        transform: 0.3s;
-        font-weight: 600;
-        /* font-family: 'Source Sans Pro', sans-serif; */
-    }
-
-</style>
-<aside  x-show="show"  id="mobile-menu" class="d-sm-none py-2 px-3 shadow-lg animate__animated animate__faster" x-transition:enter="animate__slideInLeft" x-transition:leave="animate__slideOutLeft">
+<aside x-show="show" class="py-3 px-5 fixed w-screen h-screen top-0 left-0 bg-black bg-opacity-90 text-gray-50 z-50 animate__animated animate__faster" x-transition:enter="animate__slideInLeft" x-transition:leave="animate__slideOutLeft">
     <div class="text-right py-2 px-4">
-        <button role="button" class="close-btn btn btn-link" @click="show = false">
-            <i class="fa fa-close fa-lg"></i>
-        </button>
+        <button role="button" class="" @click="show = false">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg> </button>
     </div>
-    <div class="mobile-menu-content overflow-auto text-center border-success">
-        <a class="menu-link" href="{{ url('/') }}">Home</a>
-        <a class="menu-link" href="{{ route('products.index') }}">Products</a>
-        <a class="menu-link" href="{{ route('stores.index') }}">Find a Store</a>
-        <a class="menu-link" href={{ url(appSettings('about_us_page_url', '/')) }}"">About Us</a>
-        <a class="menu-link" href="{{ route('contact-us.index') }}">Contact Us</a>
+    <div class="text-center">
+        <div class="text-2xl my-3 font-semibold"><a class="" href="{{ url('/') }}">Home</a></div>
+        <div class="text-2xl my-3 font-semibold"><a class="" href="{{ route('products.index') }}">Products</a></div>
+        <div class="text-2xl my-3 font-semibold"><a class="" href="{{ route('stores.index') }}">Find a Store</a></div>
+        <div class="text-2xl my-3 font-semibold"><a class="" href={{ url(appSettings('about_us_page_url', '/')) }}"">About Us</a></div>
+        <div class="text-2xl my-3 font-semibold"><a class="" href="{{ route('contact-us.index') }}">Contact Us</a></div>
         <div class="text-center mt-4">
             <div>
                 <a href="tel:{{ appSettings('mobile') }}"> <i class="fa fa-phone mr-1" aria-hidden="true"></i>{{ appSettings('mobile') }}</a>
