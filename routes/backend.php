@@ -6,6 +6,15 @@ Route::name('backend.')->group(function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('categories', 'CategoryController@index')->name('categories.index');
 
+    Route::get('posts', 'PostController@index')->name('posts.index');
+    Route::get('posts/create', 'PostController@create')->name('posts.create');
+    Route::post('posts', 'PostController@store')->name('posts.store');
+    Route::get('posts/{post}/edit', 'PostController@edit')->name('posts.edit');
+    Route::put('posts/{post}', 'PostController@update')->name('posts.update');
+    Route::delete('posts/{post}', 'PostController@destroy')->name('posts.destroy');
+    Route::patch('posts/{post}/restore', 'PostController@restore')->name('posts.restore');
+    Route::delete('posts/{post}/forceDelete', 'PostController@forceDelete')->name('posts.forceDelete');
+
     Route::get('products', 'ProductController@index')->name('products.index');
     Route::get('products/create', 'ProductController@create')->name('products.create');
     Route::post('products', 'ProductController@store')->name('products.store');

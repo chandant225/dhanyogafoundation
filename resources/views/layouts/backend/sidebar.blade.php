@@ -1,7 +1,6 @@
 <aside class="main-sidebar sidebar-light-indigo elevation-1">
     <!-- Brand Logo -->
     <a href="{{ url('/') }}" class="brand-link" target="_blank">
-        <img src="{{ asset('adminlte') }}/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-1" style="opacity: .8">
         <span class="brand-text font-weight-light">{{ siteName() }}</span>
     </a>
 
@@ -41,6 +40,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('backend.products.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-list"></i>
+                        <p>
+                            Products
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{ route('backend.categories.index') }}" class="nav-link">
                         <i class="nav-icon fa fa-list"></i>
                         <p>
@@ -49,12 +56,39 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('backend.products.index') }}" class="nav-link">
-                        <i class="nav-icon fa fa-box"></i>
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-book"></i>
                         <p>
-                            Products
+                            Posts
+                            <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('backend.posts.index') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>All Posts</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('backend.posts.create') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add New</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Categories</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Tags</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('backend.contact-us.index') }}" class="nav-link">

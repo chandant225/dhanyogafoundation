@@ -16,6 +16,7 @@
     <link href="{{ asset('assets/dropzone/dist/dropzone.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/backend.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/tagsinput/tagsinput.css') }}">
 
     @livewireStyles
     @stack('styles')
@@ -66,6 +67,7 @@
     <script src="{{ asset('assets/summernote/summernote-bs4.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/dropzone/dist/dropzone.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="text/javascript" src="{{ asset('assets/tagsinput/tagsinput.js') }}"></script>
     @livewireScripts
     <x-livewire-alert::scripts />
     @stack('scripts')
