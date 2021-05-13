@@ -49,29 +49,39 @@ class PostRequest extends FormRequest
     {
         $this->merge([
             'excerpt' => $this->generateExcerpt(),
+            'seo_title' => $this->generateSeoTitle(),
             'seo_description' => $this->generateSeoDescription()
         ]);
     }
 
     private function generateExcerpt()
     {
-        if ($this->except) {
-            return $this->except;
+        if ($this->filled('excerpt')) {
+            return $this->excerpt;
         }
 
-        return substr($this->description, 0, \App\Post::EXCERPT_LENGTH);
+        return substr(strip_tags(request('content')), 0, \App\Post::EXCERPT_LENGTH);
+    }
+
+    private function generateSeoTitle()
+    {
+        if ($this->filled('seo_title')) {
+            return $this->seo_title;
+        }
+
+        return $this->title;
     }
 
     private function generateSeoDescription()
     {
-        if ($this->seo_description) {
+        if ($this->filled('seo_description')) {
             return $this->seo_description;
         }
 
-        if ($this->except) {
-            return substr($this->except, 0, \App\Post::SEO_DESCRIPTION_LENGTH);
+        if ($this->filled('excerpt')) {
+            return substr($this->excerpt, 0, \App\Post::SEO_DESCRIPTION_LENGTH);
         }
 
-        return substr($this->except, 0, \App\Post::SEO_DESCRIPTION_LENGTH);
+        return substr(strip_tags(request('content')), 0, \App\Post::SEO_DESCRIPTION_LENGTH);
     }
 }

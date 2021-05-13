@@ -38,7 +38,7 @@ class PostController extends Controller
         }
 
         // Store tags
-        $request->whenFilled('tags', function($tags) use ($post) {
+        $request->whenFilled('tags', function ($tags) use ($post) {
             $post->tag($tags);
         });
 
@@ -61,7 +61,7 @@ class PostController extends Controller
             $post->save();
         }
 
-        $request->whenFilled('tags', function($tags) use ($post) {
+        $request->whenFilled('tags', function ($tags) use ($post) {
             $post->retag($tags);
         });
 
@@ -79,4 +79,21 @@ class PostController extends Controller
         return redirect()->route('backend.posts.index');
     }
 
+    public function restore($slug)
+    {
+        $post = Post::where('slug', $slug)->withTrashed()->firstOrFail();
+        $post->restore();
+        Alert::message('Post has been restored.')->send();
+        return redirect()->back();
+    }
+
+    public function forceDelete($slug)
+    {
+        $post = Post::where('slug', $slug)->withTrashed()->firstOrFail();
+        $this->imageService->unlinkImage($post->cover_image);
+        $post->forceDelete();
+
+        Alert::message('Post has been deleted permanently.')->send();
+        return redirect()->back();
+    }
 }

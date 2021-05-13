@@ -44,7 +44,7 @@
                 <x-box class="my-3">
                     <label for="post_category_id">SEO</label>
                     <div class="form-group">
-                        <input type="text" name="seo_title" class="form-control bg-light {{ invalid_class('seo_title') }}" placeholder="title">
+                        <input type="text" name="seo_title" class="form-control bg-light {{ invalid_class('seo_title') }}" placeholder="title" value="{{ old('seo_title', $post->seo_title) }}">
                         <x-invalid-feedback field="seo_title"></x-invalid-feedback>
                     </div>
                     <div class="form-group">
@@ -58,7 +58,7 @@
             {{-- End of col-md-8 --}}
             <div class="col-md-3">
                 <x-box>
-                    <button type="submit" class="btn btn-primary w-100 mx-0">{{ __('Publish') }}</button>
+                    <button type="submit" name="is_draft" value="0" class="btn btn-primary w-100 mx-0">{{ __('Publish') }}</button>
                     <button type="submit" name="is_draft" value="1" class="btn btn-sm btn-danger w-100 mx-0 my-2">{{ __('Save as Draft') }}</button>
                     @if($post->exists)
                     @if(Route::has('posts.show'))
