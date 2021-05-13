@@ -13,68 +13,68 @@
     </x-frontend.partials.page-title>
 
     <style>
-        .block-title {
+        /* .block-title {
             color: #46525f;
-        }
+        } */
 
-        .block-description {
+        /* .block-description {
             font-size: .9rem;
             color: #6e7279;
-        }
+        } */
 
-        .contact-form {
+        /* .contact-form {
             background-color: #fff;
-        }
+        } */
 
-        @media only screen AND (min-width: 700px) {
+        /* @media only screen AND (min-width: 700px) {
             .contact-form {
                 margin-top: -100px;
             }
-        }
+        } */
 
 
 
-        .contact-form label {
+        /* .contact-form label {
             font-weight: 500;
             color: #323e52;
             margin-bottom: 5px;
-        }
+        } */
 
-        .contact-form label.required::after {
+        #contact-form label.required::after {
             content: '*';
             color: #f74b4b;
             margin-left: 5px;
         }
 
     </style>
-    <div class="bg-">
+    <div class="">
 
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="bg-white h-100 p-4">
-                        <h3 class="block-title text-uppercase">{{ appSettings('contact_us_section_title') }}</h3>
-                        <p class="block-description">
+        <div class="container mx-auto py-5">
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-12 sm:col-span-5">
+                    <div class="bg-white text-gray-700 h-100 p-4">
+                        <h3 class="text-2xl text-indigo-900 font-bold uppercase mb-3">{{ appSettings('contact_us_section_title') }}</h3>
+                        <p style="color: #6e7279; font-size: .9rem;">
                             {!! appSettings('contact_us_section_description') !!}
                         </p>
                         <div class="my-3"></div>
                         <div class="py-2">
-                            <span class="text-theme-accent-color mr-3"><i class="fa fa-envelope"></i></span>
+                            <span class="text-red-500 mr-3"><i class="fa fa-envelope"></i></span>
                             <span>{{ appSettings('email') }}</span>
                         </div>
                         <div class="py-2">
-                            <span class="text-theme-accent-color mr-3"><i class="fa fa-phone"></i></span>
+                            <span class="text-red-500 mr-3"><i class="fa fa-phone"></i></span>
                             <span>{{ appSettings('mobile') }}</span>
                         </div>
                         <div class="py-2">
-                            <span class="text-theme-accent-color mr-3"><i class="fa fa-map-marker"></i></span>
+                            <span class="text-red-500 mr-3"><i class="fa fa-map-marker-alt"></i></span>
                             <span>{{ appSettings('address') }}</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2"></div>
-                <div class="col-md-5">
-                <livewire:frontend.contact-form />
+                <div class="col-span-12 sm:col-span-2"></div>
+                <div class="col-span-12 sm:col-span-5">
+                    <livewire:frontend.contact-form />
                 </div>
             </div>
         </div>

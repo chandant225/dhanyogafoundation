@@ -9,9 +9,9 @@
 
 <footer class="font-semibold text-opacity-90" style="background-color: #f7f4fb; color: #455880;">
     <div class="container mx-auto py-16 px-4">
-        <div class="grid sm:grid-cols-3">
+        <div class="grid grid-cols-12 gap-3 md:gap-4">
             {{-- First Column --}}
-            <div>
+            <div class="col-span-12 sm:col-span-5">
                 <h1 class="text-xl text-indigo-900 font-bold tracking-wide uppercase mb-4">{{ siteName() }}</h1>
                 <div>
                     <ul class= space-y-2 text-sm">
@@ -45,7 +45,7 @@
                 </div>
             </div>
             {{-- Second Column --}}
-            <div>
+            <div class="col-span-6 sm:col-span-4">
                 <h1 class="text-xl text-indigo-900 text-center font-bold tracking-wide uppercase mb-4">{{ __('Take Action') }}</h1>
                 <div>
                     <ul class="space-y-2 text-sm">
@@ -61,9 +61,8 @@
                     </ul>
                 </div>
             </div>
-
             {{-- Third Column --}}
-            <div>
+            <div class="col-span-6 sm:col-span-3">
                 <h1 class="text-xl text-indigo-900 text-center font-bold tracking-wide uppercase mb-4">{{ __('Follow Us') }}</h1>
                 <div>
                     <ul class="space-y-2 text-sm">
