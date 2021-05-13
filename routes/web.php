@@ -32,4 +32,4 @@ Route::get('find-a-store', 'StoreController@index')->name('stores.index');
 
 Route::get('contact-us', 'ContactUsController@index')->name('contact-us.index');
 
-Route::get('page/{page}', 'PageController@show')->name('frontend.pages.show');
+Route::get('{page}', 'PageController@show')->name('frontend.pages.show');

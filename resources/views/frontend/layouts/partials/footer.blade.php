@@ -3,17 +3,7 @@
 </svg>
 <section style="background: #f7f4fb;">
     <div class="container mx-auto py-16 px-4">
-        <div class="grid sm:grid-cols-2 sm:gap-3 z-10">
-            <div>
-                <h1 class="text-lg sm:text-2xl md:text-3xl text-indigo-900 font-bold">Subscribe to our newsletter which inform you about upcoming events and interesting CHARITY activities.</h1>
-            </div>
-            <div>
-                <form action="" class="sm:flex space-y-3 sm:space-y-0 space-x-4">
-                    <input type="email" class="flex-grow py-3 px-5 text-lg font-semibold border border-gray-300 rounded-full placeholder-indigo-900 focus:outline-none" placeholder="Enter your email">
-                    <button class="py-3 px-6 font-bold tracking-wide bg-red-600 rounded-full text-white hover:bg-opacity-90">Subscribe</button>
-                </form>
-            </div>
-        </div>
+       <livewire:frontend.subscription-form />
     </div>
 </section>
 
@@ -78,13 +68,13 @@
                 <div>
                     <ul class="space-y-2 text-sm">
                         <li class="flex items-center space-x-2 justify-center">
-                            <a href="#">Facebook</a>
+                            <a href="{{ appSettings('facebook_url') }}" target="_blank">Facebook</a>
                         </li>
                         <li class="flex items-center space-x-2 justify-center">
-                            <a href="#">Twitter</a>
+                            <a href="{{ appSettings('twitter_url') }}" target="_blank">Twitter</a>
                         </li>
                         <li class="flex items-center space-x-2 justify-center">
-                            <a href="#">Youtube</a>
+                            <a href="{{ appSettings('youtube_url') }}" target="_blank">Youtube</a>
                         </li>
                     </ul>
                 </div>
@@ -100,6 +90,7 @@
     </div>
 </footer>
 
+{{-- Previous footer design --}}
 <footer class="hidden bg-gray-900 text-gray-100">
     <div class="container mx-auto py-16 px-4">
         <div class="grid sm:grid-cols-3">
