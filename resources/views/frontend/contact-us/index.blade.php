@@ -49,7 +49,7 @@
     </style>
     <div class="">
 
-        <div class="container mx-auto py-5">
+        <div class="container mx-auto py-5 px-4">
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-12 sm:col-span-5">
                     <div class="bg-white text-gray-700 h-100 p-4">
