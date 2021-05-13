@@ -4,13 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Str;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
 class Page extends Model
 {
     use HasSlug, SoftDeletes;
-    
+
     protected $guarded = ['id'];
 
     protected $attributes = [
@@ -52,5 +53,28 @@ class Page extends Model
     public function hasFeaturedImage()
     {
         return $this->featured_image ? true : false;
+    }
+
+    public function seoTitle()
+    {
+        return $this->title;
+    }
+
+    public function seoDescription()
+    {
+        if ($this->excerpt) {
+            return $this->excerpt;
+        }
+
+        return $this->content ? Str::substr(strip_tags($this->content), 0, 200) : null;
+    }
+
+    public function seoImage()
+    {
+        if ($this->hasFeaturedImage()) {
+            return $this->featured_image_url;
+        }
+
+        return null;
     }
 }
