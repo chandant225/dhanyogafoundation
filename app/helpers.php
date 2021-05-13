@@ -68,7 +68,7 @@ if (!function_exists('siteLogoUrl')) {
         if (appSettings()->get('site_logo')) {
             return asset('storage/' . appSettings()->get('site_logo'));
         }
-        return asset('assets/images/logo.svg');
+        return asset('assets/images/logo.png');
     }
 }
 
@@ -78,7 +78,7 @@ if (!function_exists('faviconUrl')) {
         if (appSettings()->get('favicon')) {
             return asset('storage/' . appSettings()->get('favicon'));
         }
-        return;
+        return asset('assets/images/favicon.png');
     }
 }
 

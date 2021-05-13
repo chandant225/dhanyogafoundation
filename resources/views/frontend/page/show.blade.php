@@ -6,7 +6,7 @@
     <x-frontend.partials.page-title>
         @if($page->show_title)
         <x-slot name="title">
-            <h1 class="text-4xl font-semibold text-gray-800 leaing-8 tracking-wide">{{ $page->title }}</h1>
+            {{ $page->title }}
         </x-slot>
         @endif
         @if($page->show_breadcrumbs)
@@ -17,11 +17,11 @@
     </x-frontend.partials.page-title>
 
     @if($page->hasFeaturedImage())
-    <img class="w-100 mx-auto" src="{{ $page->featured_image_url }}" alt="{{ $page->title }}">
+    <img class="w-full mx-auto" src="{{ $page->featured_image_url }}" alt="{{ $page->title }}">
     @endif
     <div class="container mx-auto">
-        <div class="container py-5">
-            <div>
+        <div class="py-5 px-4">
+            <div class="lg:prose-lg xl:prose-xl prose-indigo">
                 {!! $page->content !!}
             </div>
         </div>

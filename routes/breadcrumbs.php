@@ -9,6 +9,23 @@ Breadcrumbs::for('contact-us', function ($trail) {
     $trail->push('Contact Us', route('contact-us.index'));
 });
 
+// Posts
+Breadcrumbs::for('posts', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Posts', route('posts.index'));
+});
+
+Breadcrumbs::for('post-category', function ($trail, $category) {
+    $trail->parent('posts');
+    $trail->push($category->name, route('posts.index'));
+});
+
+Breadcrumbs::for('post', function ($trail, $post) {
+    $trail->parent('post-category', $post->category);
+    $trail->push($post->title);
+});
+
+// Products
 Breadcrumbs::for('products', function ($trail) {
     $trail->parent('home');
     $trail->push('Products', route('products.index'));

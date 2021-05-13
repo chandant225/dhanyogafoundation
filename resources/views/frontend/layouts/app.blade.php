@@ -29,6 +29,12 @@
     @livewireStyles
     @stack('styles')
     {{ $styles ?? '' }}
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+
+    </style>
 
 </head>
 
@@ -52,7 +58,8 @@
     @stack('scripts')
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-    AOS.init();
+        AOS.init();
+
     </script>
 
 </body>

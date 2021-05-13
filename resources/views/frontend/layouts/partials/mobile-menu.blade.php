@@ -1,4 +1,4 @@
-<aside x-show="show" class="py-3 px-5 fixed w-screen h-screen top-0 left-0 bg-black bg-opacity-90 text-gray-50 z-50 animate__animated animate__faster" x-transition:enter="animate__slideInLeft" x-transition:leave="animate__slideOutLeft">
+<aside x-show="show" class="py-3 px-5 fixed w-screen h-screen top-0 left-0 bg-black bg-opacity-90 text-gray-50 z-50 animate__animated animate__faster" x-transition:enter="animate__slideInLeft" x-transition:leave="animate__slideOutLeft" x-cloak>
     <div class="text-right py-2 px-4">
         <button role="button" class="" @click="show = false">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

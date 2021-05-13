@@ -26,7 +26,8 @@ return [
     */
 
     // 'view' => 'breadcrumbs::bootstrap4',
-    'view' => 'frontend.breadcrumbs.bootstrap',
+    // 'view' => 'frontend.breadcrumbs.bootstrap',
+    'view' => 'frontend.breadcrumbs.tailwind',
 
     /*
     |--------------------------------------------------------------------------

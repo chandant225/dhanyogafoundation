@@ -62,7 +62,7 @@
                     <button type="submit" name="is_draft" value="1" class="btn btn-sm btn-danger w-100 mx-0 my-2">{{ __('Save as Draft') }}</button>
                     @if($post->exists)
                     @if(Route::has('posts.show'))
-                    <a href="{{ route('post.show', $post) }}" class="btn btn-outline-primary btn-sm rounded-0 w-100 z-depth-0 mx-0 mt-2" target="_blank">View</a>
+                    <a href="{{ route('posts.show', $post) }}" class="btn btn-outline-primary btn-sm rounded-0 w-100 z-depth-0 mx-0 mt-2" target="_blank">View</a>
                     @endif
                     <div class="text-muted mt-2">
                         Status: <span class="font-weight-bolder">{{ $post->isPublished() ? 'Published' : 'Draft' }}</span>
