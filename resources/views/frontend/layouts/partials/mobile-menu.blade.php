@@ -7,8 +7,8 @@
     </div>
     <div class="text-center">
         <div class="text-2xl my-3 font-semibold"><a class="" href="{{ url('/') }}">Home</a></div>
-        <div class="text-2xl my-3 font-semibold"><a class="" href="{{ route('products.index') }}">Products</a></div>
-        <div class="text-2xl my-3 font-semibold"><a class="" href="{{ route('stores.index') }}">Find a Store</a></div>
+        {{-- <div class="text-2xl my-3 font-semibold"><a class="" href="{{ route('products.index') }}">Products</a></div> --}}
+        {{-- <div class="text-2xl my-3 font-semibold"><a class="" href="{{ route('stores.index') }}">Find a Store</a></div> --}}
         <div class="text-2xl my-3 font-semibold"><a class="" href={{ url(appSettings('about_us_page_url', '/')) }}"">About Us</a></div>
         <div class="text-2xl my-3 font-semibold"><a class="" href="{{ route('contact-us.index') }}">Contact Us</a></div>
         <div class="text-center mt-4">
