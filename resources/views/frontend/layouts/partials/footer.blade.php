@@ -22,7 +22,7 @@
                                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                                 </svg>
                             </span>
-                            <span>{{ appSettings('mobile') }}</span>
+                            <span><a class="hover:underline" href="tel:{{ appSettings('mobile') }}">{{ appSettings('mobile') }}</a></span>
                         </li>
                         <li class="flex items-center space-x-2">
                             <span class="text-gray-500">
@@ -31,7 +31,7 @@
                                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                                 </svg>
                             </span>
-                            <span>{{ appSettings('email') }}</span>
+                            <span><a class="hover:underline" href="mailto:{{ appSettings('email') }}">{{ appSettings('email') }}</a></span>
                         </li>
                         <li class="flex items-center space-x-2">
                             <span class="text-gray-500">
@@ -84,7 +84,7 @@
             *Disclaimer: Dhana Yoga Foundation is a nonprofit 501(c)(3) charitable organization with EIN number 83-2193218. All contributions are tax deductible to the fullest extent allowed by law.
         </div>
         <div class="container mx-auto py-3 px-4 text-center text-xs">
-            Copyright © {{ date('Y') }} {{ siteName() }}. All rights reserved. <a class="hover:underline" href="#">Privacy Policy</a> - <a class="hover:underline" href="#">Cookies Policy</a> - <a class="hover:underline" href="#">Terms of Use</a> - <a class="hover:underline" href="#">Shipping & Returns</a>
+            Copyright © {{ date('Y') }} {{ siteName() }}. All rights reserved. <a class="hover:underline" href="{{ getPageUrlBySlug(getPageUrlBySlug(appSettings('privacy_policy_page_url'))) }}" target="_blank">Privacy Policy</a> - <a class="hover:underline" href="#">Cookies Policy</a> - <a class="hover:underline" href="{{ getPageUrlBySlug(appSettings('terms_and_conditions_page_url')) }}" target="_blank">Terms of Use</a> - <a class="hover:underline" href="#">Shipping & Returns</a>
         </div>
     </div>
 </footer>
@@ -114,7 +114,7 @@
                                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                                 </svg>
                             </span>
-                            <span>{{ appSettings('email') }}</span>
+                            <span><a href="mailto:{{ appSettings('email') }}">{{ appSettings('email') }}</a></span>
                         </li>
                         <li class="flex items-center space-x-2">
                             <span class="text-gray-300">
@@ -140,7 +140,7 @@
                             <a href="#">Donate</a>
                         </li>
                         <li class="flex items-center space-x-2">
-                            <a href="#">Shop</a>
+                            <a href={{ route('contact-us.index') }}">Contact</a>
                         </li>
                     </ul>
                 </div>
