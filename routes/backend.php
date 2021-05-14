@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::name('backend.')->group(function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-    Route::get('categories', 'CategoryController@index')->name('categories.index');
+    
+    // Required while adding child support listing
+    // Product Categories
+    // Route::get('categories', 'CategoryController@index')->name('categories.index');
 
     Route::get('posts', 'PostController@index')->name('posts.index');
     Route::get('posts/create', 'PostController@create')->name('posts.create');
@@ -15,14 +18,15 @@ Route::name('backend.')->group(function () {
     Route::patch('posts/{post}/restore', 'PostController@restore')->name('posts.restore');
     Route::delete('posts/{post}/forceDelete', 'PostController@forceDelete')->name('posts.forceDelete');
 
-    Route::get('products', 'ProductController@index')->name('products.index');
-    Route::get('products/create', 'ProductController@create')->name('products.create');
-    Route::post('products', 'ProductController@store')->name('products.store');
-    Route::get('products/{product}/edit', 'ProductController@edit')->name('products.edit');
-    Route::put('products/{product}', 'ProductController@update')->name('products.update');
-    Route::delete('products/{product}', 'ProductController@destroy')->name('products.destroy');
-    Route::patch('products/{product}/restore', 'ProductController@restore')->name('products.restore');
-    Route::delete('products/{product}/forceDelete', 'ProductController@forceDelete')->name('products.forceDelete');
+    // Products link will be required later in the next release
+    // Route::get('products', 'ProductController@index')->name('products.index');
+    // Route::get('products/create', 'ProductController@create')->name('products.create');
+    // Route::post('products', 'ProductController@store')->name('products.store');
+    // Route::get('products/{product}/edit', 'ProductController@edit')->name('products.edit');
+    // Route::put('products/{product}', 'ProductController@update')->name('products.update');
+    // Route::delete('products/{product}', 'ProductController@destroy')->name('products.destroy');
+    // Route::patch('products/{product}/restore', 'ProductController@restore')->name('products.restore');
+    // Route::delete('products/{product}/forceDelete', 'ProductController@forceDelete')->name('products.forceDelete');
 
     // pages
     Route::get('pages', 'PageController@index')->name('pages.index');
@@ -40,12 +44,14 @@ Route::name('backend.')->group(function () {
     Route::get('contact-us', 'ContactUsController@index')->name('contact-us.index');
     Route::get('subscribers', 'SubscriberController@index')->name('subscribers.index');
     
-    Route::get('stores', 'StoreController@index')->name('stores.index');
-    Route::get('stores/create', 'StoreController@create')->name('stores.create');
-    Route::post('stores', 'StoreController@store')->name('stores.store');
-    Route::get('stores/{store}/edit', 'StoreController@edit')->name('stores.edit');
-    Route::put('stores/{store}', 'StoreController@update')->name('stores.update');
-    Route::delete('stores/{store}', 'StoreController@destroy')->name('stores.destroy');
+    // Do not need store listing for now.
+    // Maybe we can convert this to offices listing accross various countries.
+    // Route::get('stores', 'StoreController@index')->name('stores.index');
+    // Route::get('stores/create', 'StoreController@create')->name('stores.create');
+    // Route::post('stores', 'StoreController@store')->name('stores.store');
+    // Route::get('stores/{store}/edit', 'StoreController@edit')->name('stores.edit');
+    // Route::put('stores/{store}', 'StoreController@update')->name('stores.update');
+    // Route::delete('stores/{store}', 'StoreController@destroy')->name('stores.destroy');
 
     Route::group(['namespace' => 'Setting'], function () {
         Route::get('settings/general', 'GeneralSettingController@index')->name('settings.general.index');

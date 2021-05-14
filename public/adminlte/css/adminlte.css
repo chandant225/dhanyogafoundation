@@ -13386,6 +13386,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 [class*="sidebar-light-"] .nav-sidebar > .nav-item.menu-open > .nav-link,
 [class*="sidebar-light-"] .nav-sidebar > .nav-item:hover > .nav-link {
   background-color: rgba(0, 0, 0, 0.1);
+  background-color: #f4f6f9;
   color: #212529;
 }
 
