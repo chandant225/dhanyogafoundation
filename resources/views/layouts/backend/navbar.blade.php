@@ -19,6 +19,16 @@
     <ul class="navbar-nav ml-auto">
         <li class="nav-item d-none d-sm-inline-block">
             <div class="form-inline">
+                <style>
+                    .sidebar-search-results a {
+                        color: inherit;
+                    }
+
+                    .sidebar-search-results .text-light {
+                        color: #2a3947 !important;
+                    }
+
+                </style>
                 <div class="input-group" data-widget="sidebar-search">
                     <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
                     <div class="input-group-append">
