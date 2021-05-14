@@ -21,6 +21,7 @@
             <a class="py-2 px-3 hover:text-indigo-600" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('About Us') }}</a>
             <a class="py-2 px-3 hover:text-indigo-600" href="{{ url('/') }}">{{ __('Volunteer') }}</a>
             <a class="py-2 px-3 hover:text-indigo-600" href="{{ route('posts.index') }}">{{ __('Blogs') }}</a>
+            <a class="py-2 px-3 hover:text-indigo-600" href="{{ route('contact-us.index') }}">{{ __('Contact') }}</a>
             {{-- <a class="py-2 px-3 hover:text-indigo-600" href="{{ url('/') }}">{{ __('Shop') }}</a> --}}
             <a class="py-2 px-3 bg-red-500 hover:bg-opacity-80 text-white rounded-md font-semibold " href="{{ url('/') }}">{{ __('Donate') }}</a>
         </nav>
