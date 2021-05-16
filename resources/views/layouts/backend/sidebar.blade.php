@@ -140,6 +140,12 @@
                             </a>
                         </li> --}}
                         <li class="nav-item">
+                            <a href="{{ route('backend.settings.homepage.index') }}" class="nav-link {{ setActive('backend.settings.homepage.index') }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Homepage</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('backend.settings.page.index') }}" class="nav-link {{ setActive('backend.settings.page.index') }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Page Settings</p>
