@@ -40,5 +40,22 @@ class SettingsSeeder extends Seeder
             'contact_us_section_title' => 'GET IN TOUCH',
             'contact_us_section_description' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic officiis doloribus soluta? Animi incidunt laboriosam iusto, blanditiis aut ipsa voluptatem?',
         ]);
+
+        // Homepage Settings
+        appSettings()->set([
+            'show_topbar_notice' => '',
+            'topbar_notice' => '',
+            'topbar_notice_action_text' => 'Learn More',
+            'topbar_notice_action_link' => '#',
+
+            'show_our_mission_section' => 'yes',
+            'our_mission_title' => 'Our Mission',
+            'our_mission_description' => '',
+            'our_mission_page' => '',
+
+            'show_latest_blogs_section' => 'yes',
+            'latest_blogs_section_title' => 'Latest non-government organizations news and updates, special reports, videos, and more',
+            'latest_blogs_display_count' => '3',
+        ]);
     }
 }

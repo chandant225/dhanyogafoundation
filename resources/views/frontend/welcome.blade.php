@@ -1,14 +1,6 @@
 <x-app-layout>
     {{-- <x-frontend.partials.primary-image-slider /> --}}
 
-    {{-- @include('frontend.welcome.badges') --}}
-
-    {{-- @include('frontend.welcome.featured-products') --}}
-
-    {{-- @include('frontend.welcome.just-launched-products') --}}
-
-    {{-- @include('frontend.welcome.about') --}}
-
     <div class="relative" style="background-image: url({{ asset('assets/images/temp/banner.jpg') }}); background-size: cover; min-height: 690px;">
         <div class="backdrop-filter backdrop-brightness-90 absolute w-full h-full p-5 flex items-center justify-center">
             <div class="text-center">
@@ -155,73 +147,11 @@
         </div>
     </section>
 
-    <section class="container mx-auto text-center py-16 px-4" data-aos="zoom-out-up">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-indigo-900 tracking-wide">Our Mission</h1>
-        <div class="text-gray-600 tracking-wide my-8 leading-7">
-            The Tony Robbins Foundation is a nonprofit organization created to empower individuals and organizations to make a significant difference in the quality of life of people often forgotten. We’re dedicated to creating positive changes in the lives of youth, seniors, the hungry, homeless and the imprisoned population, all who need a boost envisioning a happier and deeply satisfying way of life.
-        </div>
-        <div class="text-center mt-10">
-            <a class="py-2 px-5 border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white uppercase font-semibold tracking-wide" href="#">Learn More</a>
-        </div>
-    </section>
+    @includeIf('frontend.welcome.our-mission', [appSettings('show_our_mission_section') => 'yes'])
 
-    <section class="bg-indigo-500 text-white">
-        <div class="container mx-auto text-center py-16 px-4">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide">Our Progress</h1>
-            <div class="sm:grid grid-cols-3 gap-4 my-8 max-w-6xl mx-auto space-y-5 sm:space-y-0">
-                <div>
-                    <h6 class="text-2xl mb-3">International Basket Brigade</h6>
-                    <img class="w-auto h-24 mx-auto my-6" src="https://www.thetonyrobbinsfoundation.org/wp-content/uploads/2017/09/icon_basket-e1524250241602.png" alt="" data-aos="zoom-in">
-                    <div class="mt-4 text-sm">Millions of people feed</div>
-                </div>
-                <div>
-                    <h6 class="text-2xl mb-3">Global Youth Leadership Summit</h6>
-                    <img class="w-auto h-24 mx-auto my-6" src="https://www.thetonyrobbinsfoundation.org/wp-content/uploads/2016/07/globe-e1524250270205.png" alt="" data-aos="zoom-in">
-                    <div class="mt-4 text-sm">Thousands Of Youth Participants Around The World</div>
-                </div>
-                <div>
-                    <h6 class="text-2xl mb-3">Inmate Empowerment Program</h6>
-                    <img class="w-auto h-24 mx-auto my-6" src="https://www.thetonyrobbinsfoundation.org/wp-content/uploads/2018/04/1.6k-Inmate-Emp-e1524257260288.png" alt="" data-aos="zoom-in">
-                    <div class="mt-4 text-sm">Thousands Of Youth Participants Around The World</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-gray-100 ">
-        <div class="container mx-auto py-16 px-4">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl text-center text-indigo-900 font-semibold tracking-wide mb-8">Our Programs</h1>
-            <div class="sm:grid grid-cols-3 gap-4 space-y-5 sm:space-y-0">
-                <div class="bg-white py-10 px-6 md:px-8 shadow-sm hover:shadow-xl" data-aos="fade-up-right" data-aos-duration="1000">
-                    <h1 class="text-2xl sm:text-2xl text-indigo-600 tracking-wide font-semibold">INTERNATIONAL BASKET BRIGADE</h1>
-                    <div class="text-gray-600 tracking-wide my-8 leading-7 text-justify">
-                        Feeding those in need, the International Basket Brigade is built on a simple notion: One small act of generosity on the part of one caring person can transform the lives of hundreds. Volunteers deliver donated baskets of food and household items to those facing hunger. Millions of baskets have been delivered all over the world.
-                    </div>
-                    <div class="mt-4 text-center">
-                        <a class="inline-block py-2 px-5 border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white uppercase font-semibold tracking-wide" href="#">Explore</a>
-                    </div>
-                </div>
-                <div class="bg-white py-10 px-6 md:px-8 shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-duration="1000">
-                    <h1 class="text-2xl sm:text-2xl text-indigo-600 tracking-wide font-semibold">INTERNATIONAL BASKET BRIGADE</h1>
-                    <div class="text-gray-600 tracking-wide my-8 leading-7 text-justify">
-                        Feeding those in need, the International Basket Brigade is built on a simple notion: One small act of generosity on the part of one caring person can transform the lives of hundreds. Volunteers deliver donated baskets of food and household items to those facing hunger. Millions of baskets have been delivered all over the world.
-                    </div>
-                    <div class="mt-4 text-center">
-                        <a class="inline-block py-2 px-5 border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white uppercase font-semibold tracking-wide" href="#">Explore</a>
-                    </div>
-                </div>
-                <div class="bg-white py-10 px-6 md:px-8 shadow-sm hover:shadow-xl" data-aos="fade-up-left" data-aos-duration="1000">
-                    <h1 class="text-2xl sm:text-2xl text-indigo-600 tracking-wide font-semibold">INTERNATIONAL BASKET BRIGADE</h1>
-                    <div class="text-gray-600 tracking-wide my-8 leading-7 text-justify">
-                        Feeding those in need, the International Basket Brigade is built on a simple notion: One small act of generosity on the part of one caring person can transform the lives of hundreds. Volunteers deliver donated baskets of food and household items to those facing hunger. Millions of baskets have been delivered all over the world.
-                    </div>
-                    <div class="mt-4 text-center">
-                        <a class="inline-block py-2 px-5 border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white uppercase font-semibold tracking-wide" href="#">Explore</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('frontend.welcome.our-progress')
+  
+    @include('frontend.welcome.our-programs')
 
     <section class="max-w-screen-xl mx-auto py-16 px-4">
         <div class="relative aspect-w-16 aspect-h-8">
@@ -317,112 +247,7 @@
     </section>
 
 
-    <section class="bg-gray-50">
-        <div class=" max-w-screen-xl mx-auto py-16 px-4">
-            <h2 class="text-lg sm:text-3xl md:text-3xl text-indigo-900 font-bold text-center tracking-wide leading-relaxed mb-16">Latest non-government organizations news and updates, special reports, videos, and more</h2>
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 space-y-5 sm:space-y-0">
-                <div class="p-3 bg-white rounded-lg shadow transform duration-500 hover:-translate-y-3 hover:shadow-xl">
-                    <div class="aspect-w-6 aspect-h-4">
-                        <img class="rounded-lg object-cover" src="{{ asset('assets/images/temp/ngo-news-1-400x250.jpg') }}" alt="">
-                    </div>
-                    <div class="p-4">
-                        <div class="bg-red-50 py-2 px-3 group inline-flex items-center space-x-2 rounded-full hover:bg-red-500">
-                            <span class="inline-block bg-red-500 w-3 h-3 rounded-full group-hover:bg-white"></span>
-                            <span class="text-red-600 font-semibold text-sm group-hover:text-white">Education</span>
-                        </div>
-                        <h1 class="text-lg text-indigo-900 font-bold my-4 tracking-wide">
-                            <a href="#">NGO calls for concrete steps to protect children learning</a>
-                        </h1>
-                        <div class="flex items-center space-x-4 text-indigo-900 font-semibold">
-                            <div>
-                                <span class="text-red-500 mr-1">
-                                    <svg class="inline w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                </span>
-                                <span>Mar 12, 2021</span>
-                            </div>
-                            <div>
-                                <span class="text-red-500 mr-1">
-                                    <svg class="inline-flex w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
-                                    </svg>
-                                </span>
-                                <span>Admin</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-3 bg-white rounded-lg shadow transform duration-500 hover:-translate-y-3 hover:shadow-xl">
-                    <div class="aspect-w-6 aspect-h-4">
-                        <img class="rounded-lg object-cover" src="{{ asset('assets/images/temp/ngo-news-2-400x250.jpg') }}" alt="">
-                    </div>
-                    <div class="p-4">
-                        <div class="bg-red-50 py-2 px-3 group inline-flex items-center space-x-2 rounded-full hover:bg-red-500">
-                            <span class="inline-block bg-red-500 w-3 h-3 rounded-full group-hover:bg-white"></span>
-                            <span class="text-red-600 font-semibold text-sm group-hover:text-white">Education</span>
-                        </div>
-                        <h1 class="text-lg text-indigo-900 font-bold my-4 tracking-wide">
-                            <a href="#">NGO calls for concrete steps to protect children learning</a>
-                        </h1>
-                        <div class="flex items-center space-x-4 text-indigo-900 font-semibold">
-                            <div>
-                                <span class="text-red-500 mr-1">
-                                    <svg class="inline w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                </span>
-                                <span>Mar 12, 2021</span>
-                            </div>
-                            <div>
-                                <span class="text-red-500 mr-1">
-                                    <svg class="inline-flex w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
-                                    </svg>
-                                </span>
-                                <span>Admin</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-3 bg-white rounded-lg shadow transform duration-500 hover:-translate-y-3 hover:shadow-xl">
-                    <div class="aspect-w-6 aspect-h-4">
-                        <img class="rounded-lg object-cover" src="{{ asset('assets/images/temp/ngo-news-3-400x250.jpg') }}" alt="">
-                    </div>
-                    <div class="p-4">
-                        <div class="bg-red-50 py-2 px-3 group inline-flex items-center space-x-2 rounded-full hover:bg-red-500">
-                            <span class="inline-block bg-red-500 w-3 h-3 rounded-full group-hover:bg-white"></span>
-                            <span class="text-red-600 font-semibold text-sm group-hover:text-white">Education</span>
-                        </div>
-                        <h1 class="text-lg text-indigo-900 font-bold my-4 tracking-wide">
-                            <a href="#">NGO calls for concrete steps to protect children learning</a>
-                        </h1>
-                        <div class="flex items-center space-x-4 text-indigo-900 font-semibold">
-                            <div>
-                                <span class="text-red-500 mr-1">
-                                    <svg class="inline w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
-                                </span>
-                                <span>Mar 12, 2021</span>
-                            </div>
-                            <div>
-                                <span class="text-red-500 mr-1">
-                                    <svg class="inline-flex w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
-                                    </svg>
-                                </span>
-                                <span>Admin</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-6 text-center">
-                <a class="inline-block py-2 px-5 border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white uppercase font-semibold tracking-wide" href="{{ route('posts.index') }}">View More</a>
-            </div>
-        </div>
-    </section>
+    @includeIf('frontend.welcome.latest-blogs', [appSettings('show_latest_blogs_section') => 'yes'])
 
     <section class="bg-no-repeat bg-cover bg-center sm:bg-left pb-36" style="background-image: url(/assets/images/transport-bg3.webp);">
         <div class="container mx-auto py-16 px-4">

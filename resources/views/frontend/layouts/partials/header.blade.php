@@ -1,10 +1,4 @@
-<div class="py-2 px-3 bg-gradient-to-r from-indigo-600 via-purple-500 to-blue-500 overflow-hidden" data-aos="fade-down">
-    <div class="container mx-auto flex items-center justify-center space-x-3">
-        <div class="text-sm font-medium text-white">Subscribe to our newsletter which inform you about upcoming events and interesting CHARITY activities!</div>
-        <span aria-hidden="true" class="hidden sm:block mx-6 h-6 w-px bg-white bg-opacity-20"></span>
-        <a class="whitespace-nowrap inline-flex rounded-md bg-white py-2 px-3 text-xs font-semibold uppercase text-blue-500 hover:bg-opacity-90" href="#">Learn More →</a>
-    </div>
-</div>
+@includeIf('frontend.layouts.partials.topbar-notice', [appSettings('show_topbar_notice') => 'yes'])
 <header>
     <div class="container mx-auto flex justify-between items-center space-x-2 py-3 px-2 lg:px-6" x-data="{ show: false }">
         <a class="navbar-brand logo" href="{{ url('/') }}">
