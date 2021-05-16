@@ -201,6 +201,30 @@
                         </li>
                     </ul>
                 </li>
+                {{-- FAQ --}}
+                <li class="nav-item @if(request()->routeIs('backend.faqs.*')) menu-open @endif">
+                    <a href="#" class="nav-link {{ setActive('backend.faqs.*') }}">
+                        <i class="nav-icon fa fa-file-image"></i>
+                        <p>
+                            FAQ
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('backend.faqs.index') }}" class="nav-link {{ setActive('backend.faqs.index') }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>List All</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('backend.faqs.create') }}" class="nav-link {{ setActive('backend.faqs.create') }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add New</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

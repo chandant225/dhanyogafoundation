@@ -224,29 +224,8 @@
     </section>
 
 
-    <section class="max-w-screen-xl mx-auto py-16 px-4">
-        <h1 class="text-lg sm:text-3xl md:text-3xl text-indigo-900 font-bold text-center tracking-wide leading-relaxed mb-16">Get answers to common questions</h1>
-        <div class="grid sm:grid-cols-2 gap-6 space-y-5 sm:space-y-0">
-            @for($i = 1; $i <= 6; $i++) <div>
-                <div class="border border-gray-200 rounded-xl p-4 sm:p-5 md:p-8 transition ease-in-out duration-1000" x-data="{ open: false }">
-                    <button class="w-full flex focus:outline-none" type="button" role="button" @click="open = !open">
-                        <span class="text-indigo-900 font-bold hover:text-red-500">How do I volunteer with Sway?</span>
-                        <span class="ml-auto">
-                            <svg class="w-5 h-5 text-gray-500 transform transition ease-linear duration-500" :class="{ 'rotate-180': open }" x-transition:enter="" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="py-5" x-show="open">
-                        Volunteers play a key role help Sway achieve its mission to reduce poverty and injustice around the world, from office work to helping in shops or stewarding at events and concerts.
-                    </div>
-                </div>
-        </div>
-        @endfor
-        </div>
-    </section>
-
-
+    <x-faq-section></x-faq-section>
+    
     @includeIf('frontend.welcome.latest-blogs', [appSettings('show_latest_blogs_section') => 'yes'])
 
     <section class="bg-no-repeat bg-cover bg-center sm:bg-left pb-36" style="background-image: url(/assets/images/transport-bg3.webp);">

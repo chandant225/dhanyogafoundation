@@ -69,6 +69,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script type="text/javascript" src="{{ asset('assets/tagsinput/tagsinput.js') }}"></script>
     @livewireScripts
+    <script type="text/javascript" src="{{ asset('assets/livewire-sortable/livewire-sortable.js') }}"></script>
     <x-livewire-alert::scripts />
     @stack('scripts')
 </body>
