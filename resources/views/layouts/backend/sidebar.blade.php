@@ -102,7 +102,6 @@
                         </span>
                         <p>
                             Contact Messages
-                            <span class="right badge badge-danger">New</span>
                         </p>
                     </a>
                 </li>

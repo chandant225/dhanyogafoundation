@@ -6,16 +6,16 @@
         <button wire:click.prevsent="$set('sortMode', true)" class="btn btn-primary">Arrange Order</button>
         @endif
     </div>
-    <div class="row" wire:sortable="sortTestimonials" >
+    <div class="row" wire:sortable="sortTestimonials">
         @foreach ($testimonials as $testimonial)
         <div class="col-md-4" @if($sortMode) wire:sortable.item="{{ $testimonial->id }}" wire:key="testimonial-{{ $testimonial->id }}" @endif>
             <div class="card my-3 rounded d-flex">
-               @if ($sortMode)
-               <div class="card-header">
-                  <button wire:sortable.handle type="button" class="btn btn-link"><i class="fas fa-arrows-alt"></i></button>
-                  <span>Use this handle to move the card</span>
-               </div>
-               @endif
+                @if ($sortMode)
+                <div class="card-header">
+                    <button wire:sortable.handle type="button" class="btn btn-link"><i class="fas fa-arrows-alt"></i></button>
+                    <span>Use this handle to move the card</span>
+                </div>
+                @endif
                 <div class="card-body">
                     <p class="card-text">
                         {{ $testimonial->content }}
@@ -36,6 +36,10 @@
         </div>
         @endforeach
     </div>
+
+    @empty($testimonials)
+    @include('partials.no-content')
+    @endif
 </div>
 @push('styles')
 <style>
