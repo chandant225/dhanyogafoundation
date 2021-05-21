@@ -1,79 +1,38 @@
-    <style>
-        .primary-image-slide {
-            background-color: #000;
-            color: #fff;
-        }
-
-        .primary-image-slide .slide-left {
-            padding: 25px 20%;
-        }
-
-        .primary-image-slide .slide-left .title {
-            font-size: 2.5rem;
-            font-weight: 500;
-            line-height: 1.5;
-        }
-
-        .primary-image-slide .slide-left .description {
-            color: #808080;
-        }
-
-        .primary-image-slide .slide-left .action-button {
-            display: inline-block;
-            margin-top: 40px;
-            text-decoration: none;
-            border: 1px solid var(--theme-color);
-            padding: 5px 10px;
-            color: #fff;
-            background-color: transparent;
-            transition: 250ms all;
-        }
-
-        .primary-image-slide .slide-left .action-button:hover {
-            color: #fff;
-            background-color: var(--theme-color);
-        }
-
-        .primary-image-slide .image-wrapper {
-            --primary-image-slide-aspect-ratio: 4/3;
-            text-align: center;
-            position: relative;
-            height: 0;
-            padding-bottom: calc(100% / (var(--primary-image-slide-aspect-ratio)));
-        }
-
-        .primary-image-slide .image-wrapper>img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-    </style>
     <div class="primary-image-slider owl-carousel">
         @foreach ($slides as $slide)
         <div class="primary-image-slide">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="h-100 d-flex" style="align-items: center; padding: 20px;">
-                        <div class="slide-left">
-                            <h1 class="title">{{ $slide->title }}</h1>
-                            <div class="my-3" style="width: 30%; height: 3px; background-color: var(--theme-color);"></div>
+            <div class="relative" style="background-image: url({{ $slide->image_url }}); background-size: cover; min-height: 690px;">
+                <div class="backdrop-filter backdrop-brightness-90 absolute w-full h-full p-5 flex items-center justify-center">
+                    <div class="text-center">
+                        <section class="text-white">
+                            <h1 class="text-4xl md:text-5xl my-4 font-semibold tracking-wide">{{ $slide->title }}</h1>
                             @if($slide->description)
-                            <p class="description">{{ $slide->description }}</p>
+                            <p class="tracking-wide">
+                                {{ $slide->description }}
+                            </p>
                             @endif
-                            @if ($slide->action_link)
-                            <a class="action-button" href="{{ $slide->action_link }}" @if($slide->open_in_new_tab) target="_blank" @endif>{{ $slide->action_button_text ?? 'Shop Now' }}</a>
-                            @endif
-                        </div>
+                            <div class="mt-5" data-aos="fade-up">
+                                @if ($slide->action_link)
+                                <a class="py-2 px-5 border-2 border-blue-600 bg-blue-600 text-white uppercase hover:bg-white hover:text-blue-600 sm:mr-3" href="{{ $slide->action_link }}" @if($slide->open_in_new_tab) target="_blank" @endif>{{ $slide->action_button_text ?? 'Donate' }}</a>
+                                @endif
+                                <a class="py-2 px-5 border-2 border-red-600 bg-red-600 text-white uppercase hover:bg-white hover:text-red-600" href="/programs/volunteer-program/">VOLUNTEER</a>
+                            </div>
+                        </section>
                     </div>
                 </div>
-                <div class="col-md-6 bg-white pl-3 pb-3">
-                    <div class="image-wrapper">
-                        <img src="{{ $slide->image_url }}" alt="{{ $slide->title }}">
-                    </div>
+                {{-- Waves --}}
+                <div class=" absolute bottom-0 w-full">
+                    <svg class="w-full h-32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                        </defs>
+                        <g class="separator-waves-parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)"></use>
+                            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"></use>
+                            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"></use>
+                        </g>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -91,5 +50,43 @@
         });
 
     </script>
+    @endpush
 
+    @push('styles')
+    <style>
+        .separator-waves-parallax>use {
+            animation: move-forever 25s cubic-bezier(.55, .5, .45, .5)infinite
+        }
+
+        .separator-waves-parallax>use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s
+        }
+
+        .separator-waves-parallax>use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s
+        }
+
+        .separator-waves-parallax>use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s
+        }
+
+        .separator-waves-parallax>use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s
+        }
+
+        @keyframes move-forever {
+            0% {
+                transform: translate3d(-90px, 0, 0)
+            }
+
+            100% {
+                transform: translate3d(85px, 0, 0)
+            }
+        }
+
+    </style>
     @endpush

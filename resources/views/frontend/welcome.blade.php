@@ -1,7 +1,7 @@
 <x-app-layout>
-    {{-- <x-frontend.partials.primary-image-slider /> --}}
+    <x-frontend.partials.primary-image-slider />
 
-    <div class="relative" style="background-image: url({{ asset('assets/images/temp/banner.jpg') }}); background-size: cover; min-height: 690px;">
+    {{-- <div class="relative" style="background-image: url({{ asset('assets/images/temp/banner.jpg') }}); background-size: cover; min-height: 690px;">
         <div class="backdrop-filter backdrop-brightness-90 absolute w-full h-full p-5 flex items-center justify-center">
             <div class="text-center">
                 <section class="text-white">
@@ -16,45 +16,10 @@
                         <a class="py-2 px-5 border-2 border-red-600 bg-red-600 text-white hover:bg-white hover:text-red-600" href="/programs/volunteer-program/">VOLUNTEER</a>
                     </div>
                 </section>
-            </div><!-- .site-content-->
-        </div>
-        <style>
-            .separator-waves-parallax>use {
-                animation: move-forever 25s cubic-bezier(.55, .5, .45, .5)infinite
-            }
-
-            .separator-waves-parallax>use:nth-child(1) {
-                animation-delay: -2s;
-                animation-duration: 7s
-            }
-
-            .separator-waves-parallax>use:nth-child(2) {
-                animation-delay: -3s;
-                animation-duration: 10s
-            }
-
-            .separator-waves-parallax>use:nth-child(3) {
-                animation-delay: -4s;
-                animation-duration: 13s
-            }
-
-            .separator-waves-parallax>use:nth-child(4) {
-                animation-delay: -5s;
-                animation-duration: 20s
-            }
-
-            @keyframes move-forever {
-                0% {
-                    transform: translate3d(-90px, 0, 0)
-                }
-
-                100% {
-                    transform: translate3d(85px, 0, 0)
-                }
-            }
-
-        </style>
-        <div class=" absolute bottom-0 w-full">
+            </div>
+        </div> --}}
+      
+        {{-- <div class=" absolute bottom-0 w-full">
             <svg class="w-full h-32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                 <defs>
                     <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
@@ -66,7 +31,7 @@
                     <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"></use>
                 </g>
             </svg>
-        </div>
+        </div> --}}
     </div>
 
 
