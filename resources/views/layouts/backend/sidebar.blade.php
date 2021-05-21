@@ -201,6 +201,15 @@
                         </li>
                     </ul>
                 </li>
+                {{-- Testimonials --}}
+                <li class="nav-item">
+                    <a href="{{ route('backend.testimonials.index') }}" class="nav-link {{ setActive('backend.testimonials.index') }}">
+                        <i class="nav-icon fas fa-exclamation-circle"></i>
+                        <p>
+                            Testimonials
+                        </p>
+                    </a>
+                </li>
                 {{-- FAQ --}}
                 <li class="nav-item @if(request()->routeIs('backend.faqs.*')) menu-open @endif">
                     <a href="#" class="nav-link {{ setActive('backend.faqs.*') }}">

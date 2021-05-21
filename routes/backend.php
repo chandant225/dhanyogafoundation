@@ -60,6 +60,8 @@ Route::name('backend.')->group(function () {
     Route::put('faqs/{faq}', 'FaqController@update')->name('faqs.update');
     Route::delete('faqs/{faq}', 'FaqController@destroy')->name('faqs.destroy');
 
+    Route::get('testimonials', 'TestimonialController@index')->name('testimonials.index');
+
     Route::group(['namespace' => 'Setting'], function () {
         Route::get('settings/general', 'GeneralSettingController@index')->name('settings.general.index');
         Route::post('settings/general', 'GeneralSettingController@store')->name('settings.general.store');
