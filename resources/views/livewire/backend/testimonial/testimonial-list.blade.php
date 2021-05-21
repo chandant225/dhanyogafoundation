@@ -37,9 +37,10 @@
         @endforeach
     </div>
 
-    @empty($testimonials)
+    @if (!count($testimonials))
     @include('partials.no-content')
     @endif
+
 </div>
 @push('styles')
 <style>
