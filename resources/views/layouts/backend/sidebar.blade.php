@@ -52,7 +52,7 @@
                 </p>
                 </a>
                 </li> --}}
-                <li class="nav-item @if(request()->routeIs('backend.posts*')) menu-open @endif"">
+                <li class="nav-item @if(request()->routeIs('backend.posts.*') || request()->routeIs('backend.post-categories.*') ) menu-open @endif"">
                     <a href=" #" class="nav-link @if(request()->routeIs('backend.posts*')) active @endif">
                     <span class="nav-icon svg-icon svg-baseline">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
@@ -79,7 +79,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('backend.post-categories.index') }}" class="nav-link {{ setActive('backend.post-categories.index') }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Categories</p>
                             </a>

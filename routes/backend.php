@@ -9,6 +9,9 @@ Route::name('backend.')->group(function () {
     // Product Categories
     // Route::get('categories', 'CategoryController@index')->name('categories.index');
 
+    // Post Categories
+    Route::get('post-categories', 'PostCategoryController@index')->name('post-categories.index');
+
     Route::get('posts', 'PostController@index')->name('posts.index');
     Route::get('posts/create', 'PostController@create')->name('posts.create');
     Route::post('posts', 'PostController@store')->name('posts.store');
