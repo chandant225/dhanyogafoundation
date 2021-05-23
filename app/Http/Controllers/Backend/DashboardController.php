@@ -2,12 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Category;
 use App\Http\Controllers\Controller;
-use App\Page;
-use App\Post;
-use App\PostCategory;
-use App\Subscriber;
 use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller

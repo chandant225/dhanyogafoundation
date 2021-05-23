@@ -18,7 +18,7 @@
                         </span>
                         <div class="info-box-content">
                             <span class="info-box-text">Posts</span>
-                            <span class="info-box-number"><span class="font-weight-normal">Total:</span> {{ $postsCount }} ({{ $postCategoriesCount }} Categories)</span>
+                            <span class="info-box-number"><span class="font-weight-normal">Total:</span> {{ $postsCount }} <span class="font-weight-normal">({{ $postCategoriesCount }} Categories)</span></span>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                         </span>
                         <div class="info-box-content">
                             <span class="info-box-text">Subscribers</span>
-                            <span class="info-box-number">Total {{ $subscribersCount }}</span>
+                            <span class="info-box-number"><span class="font-weight-normal">Total</span> {{ $subscribersCount }}</span>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                         </span>
                         <div class="info-box-content">
                             <span class="info-box-text">Pages</span>
-                            <span class="info-box-number">Total {{ $pagesCount }}</span>
+                            <span class="info-box-number"><span class="font-weight-normal">Total</span> {{ $pagesCount }}</span>
                         </div>
                     </div>
                 </div>
