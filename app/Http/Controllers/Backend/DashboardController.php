@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Category;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Page;
+use App\Post;
+use App\PostCategory;
+use App\Subscriber;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -24,6 +29,18 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $totals = collect(DB::select("SELECT 
+            (select count('id') from posts) as postsCount,
+            (select count(*) from post_categories) as postCategoriesCount,
+            (select count(*) from pages) as pagesCount,
+            (select count(*) from subscribers) as subscribersCount
+            "))->first();
+
+        return view('dashboard', [
+            'postsCount' => $totals->postsCount,
+            'postCategoriesCount' => $totals->postCategoriesCount,
+            'pagesCount' => $totals->pagesCount,
+            'subscribersCount' => $totals->subscribersCount,
+        ]);
     }
 }
