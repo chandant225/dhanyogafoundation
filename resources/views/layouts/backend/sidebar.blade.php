@@ -68,19 +68,19 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{ route('backend.posts.index') }}" class="nav-link {{ setActive('backend.posts.index') }}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="far fa-circle nav-icon text-primary"></i>
                                 <p>All Posts</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('backend.posts.create') }}" class="nav-link {{ setActive('backend.posts.create') }}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="far fa-circle nav-icon text-warning"></i>
                                 <p>Add New</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('backend.post-categories.index') }}" class="nav-link {{ setActive('backend.post-categories.index') }}">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="far fa-circle nav-icon text-danger"></i>
                                 <p>Categories</p>
                             </a>
                         </li>
@@ -160,8 +160,6 @@
                         <li class="nav-item">
                             <a href="{{ route('backend.settings.general.index') }}" class="nav-link {{ setActive('backend.settings.general.index') }}">
                                 <i class="far fa-circle nav-icon text-info"></i>
-
-
                                 <p>General</p>
                             </a>
                         </li>
@@ -173,13 +171,13 @@
                 </li> --}}
                 <li class="nav-item">
                     <a href="{{ route('backend.settings.homepage.index') }}" class="nav-link {{ setActive('backend.settings.homepage.index') }}">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="far fa-circle nav-icon text-success"></i>
                         <p>Homepage</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('backend.settings.page.index') }}" class="nav-link {{ setActive('backend.settings.page.index') }}">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="far fa-circle nav-icon text-warning"></i>
                         <p>Page Settings</p>
                     </a>
                 </li>
@@ -274,13 +272,13 @@
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
                         <a href="{{ route('backend.faqs.index') }}" class="nav-link {{ setActive('backend.faqs.index') }}">
-                            <i class="far fa-circle nav-icon"></i>
+                            <i class="far fa-circle nav-icon text-success"></i>
                             <p>List All</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('backend.faqs.create') }}" class="nav-link {{ setActive('backend.faqs.create') }}">
-                            <i class="far fa-circle nav-icon"></i>
+                            <i class="far fa-circle nav-icon text-warning"></i>
                             <p>Add New</p>
                         </a>
                     </li>
