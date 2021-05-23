@@ -18,7 +18,7 @@ class PostCategoryForm extends Component
     {
         return [
             'postCategory.name' => 'required',
-            'postCategory.slug' => $this->postCategory->exists ? 'required' : 'required',
+            'postCategory.slug' => $this->postCategory->exists ? 'required' : 'nullable',
             'postCategory.description' => 'nullable'
         ];
     }
