@@ -15,6 +15,11 @@
                 </div>
 
                 <div class="form-group">
+                    <x-form.label>State Disclosures Page Url</x-form.label>
+                    @include('setting.fields.page-selector', ['settingKey' => 'state_disclosures_page_url'])
+                </div>
+
+                <div class="form-group">
                     <x-form.label>Privacy Policy Page Url</x-form.label>
                     @include('setting.fields.page-selector', ['settingKey' => 'privacy_policy_page_url'])
                 </div>

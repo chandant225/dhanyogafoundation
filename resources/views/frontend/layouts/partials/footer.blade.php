@@ -3,7 +3,7 @@
 </svg>
 <section style="background: #f7f4fb;">
     <div class="container mx-auto py-16 px-4">
-       <livewire:frontend.subscription-form />
+        <livewire:frontend.subscription-form />
     </div>
 </section>
 
@@ -14,8 +14,8 @@
             <div class="col-span-12 sm:col-span-5">
                 <h1 class="text-xl text-indigo-900 font-bold tracking-wide uppercase mb-4">{{ siteName() }}</h1>
                 <div>
-                    <ul class= space-y-2 text-sm">
-                        <li class="flex items-center space-x-2">
+                    <ul class=space-y-2 text-sm">
+                        {{-- <li class="flex items-center space-x-2">
                             <span class="text-gray-500">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14.414 7l3.293-3.293a1 1 0 00-1.414-1.414L13 5.586V4a1 1 0 10-2 0v4.003a.996.996 0 00.617.921A.997.997 0 0012 9h4a1 1 0 100-2h-1.586z"></path>
@@ -23,7 +23,7 @@
                                 </svg>
                             </span>
                             <span><a class="hover:underline" href="tel:{{ appSettings('mobile') }}">{{ appSettings('mobile') }}</a></span>
-                        </li>
+                        </li> --}}
                         <li class="flex items-center space-x-2">
                             <span class="text-gray-500">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +56,7 @@
                             <a href="#">Donate</a>
                         </li>
                         <li class="flex items-center space-x-2 justify-center">
-                            <a href="#">Shop</a>
+                            <a href="{{ route('posts.index') }}">Blogs</a>
                         </li>
                     </ul>
                 </div>
@@ -84,7 +84,20 @@
             *Disclaimer: Dhana Yoga Foundation is a nonprofit 501(c)(3) charitable organization with EIN number 83-2193218. All contributions are tax deductible to the fullest extent allowed by law.
         </div>
         <div class="container mx-auto py-3 px-4 text-center text-xs">
-            Copyright © {{ date('Y') }} {{ siteName() }}. All rights reserved. <a class="hover:underline" href="{{ getPageUrlBySlug(getPageUrlBySlug(appSettings('privacy_policy_page_url'))) }}" target="_blank">Privacy Policy</a> - <a class="hover:underline" href="#">Cookies Policy</a> - <a class="hover:underline" href="{{ getPageUrlBySlug(appSettings('terms_and_conditions_page_url')) }}" target="_blank">Terms of Use</a> - <a class="hover:underline" href="#">Shipping & Returns</a>
+            Copyright © {{ date('Y') }} {{ siteName() }}. All rights reserved.
+            <a class="hover:underline" href="{{ route('contact-us.index') }}">Contact Us</a>
+            <span>-</span>
+            <a class="hover:underline" href="#">Search</a>
+            <span>-</span>
+            <a class="hover:underline" href="{{ getPageUrlBySlug(appSettings('state_disclosures_page_url')) }}" target="_blank">State Disclosures</a>
+            <span>-</span>
+            <a class="hover:underline" href="{{ getPageUrlBySlug(appSettings('privacy_policy_page_url')) }}" target="_blank">Privacy Policy</a>
+            <span>-</span>
+            <a class="hover:underline" href="{{ getPageUrlBySlug(appSettings('terms_and_conditions_page_url')) }}" target="_blank">Terms of Use</a>
+            <span>-</span>
+            <a class="hover:underline" href="#">Job Oppurtunities</a>
+            <span>-</span>
+            <a class="hover:underline" href="{{ route('login') }}">Sign In</a>
         </div>
     </div>
 </footer>
