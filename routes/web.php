@@ -33,6 +33,8 @@ Route::get('blogs/{post}', 'PostController@show')->name('posts.show');
 Route::get('our-team', 'OurTeamController@index')->name('our-team.index');
 Route::get('our-team/{slug}', 'OurTeamController@show')->name('our-team.show');
 
+Route::get('financials-reports', 'ReportController@index')->name('reports.index');
+
 Route::get('contact-us', 'ContactUsController@index')->name('contact-us.index');
 
 // Static Pages

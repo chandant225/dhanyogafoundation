@@ -68,6 +68,10 @@ Route::name('backend.')->group(function () {
 
     Route::get('testimonials', 'TestimonialController@index')->name('testimonials.index');
 
+    Route::get('downloads', 'DownloadController@index')->name('downloads.index');
+    Route::get('downloads/create', 'DownloadController@create')->name('downloads.create');
+    Route::get('downloads/{download}/edit', 'DownloadController@edit')->name('downloads.edit');
+
     Route::group(['namespace' => 'Setting'], function () {
         Route::get('settings/general', 'GeneralSettingController@index')->name('settings.general.index');
         Route::post('settings/general', 'GeneralSettingController@store')->name('settings.general.store');
