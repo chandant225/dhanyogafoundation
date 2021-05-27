@@ -35,10 +35,12 @@
                             <span class="text-red-500 mr-3"><i class="fa fa-envelope"></i></span>
                             <span>{{ appSettings('email') }}</span>
                         </div>
+                        @if (appSettings('mobile'))
                         <div class="py-2">
                             <span class="text-red-500 mr-3"><i class="fa fa-phone"></i></span>
                             <span>{{ appSettings('mobile') }}</span>
                         </div>
+                        @endif
                         <div class="py-2">
                             <span class="text-red-500 mr-3"><i class="fa fa-map-marker-alt"></i></span>
                             <span>{{ appSettings('address') }}</span>

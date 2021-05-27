@@ -15,7 +15,8 @@
                 <h1 class="text-xl text-indigo-900 font-bold tracking-wide uppercase mb-4">{{ siteName() }}</h1>
                 <div>
                     <ul class=space-y-2 text-sm">
-                        {{-- <li class="flex items-center space-x-2">
+                        @if (appSettings('mobile'))
+                        <li class="flex items-center space-x-2">
                             <span class="text-gray-500">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14.414 7l3.293-3.293a1 1 0 00-1.414-1.414L13 5.586V4a1 1 0 10-2 0v4.003a.996.996 0 00.617.921A.997.997 0 0012 9h4a1 1 0 100-2h-1.586z"></path>
@@ -23,7 +24,8 @@
                                 </svg>
                             </span>
                             <span><a class="hover:underline" href="tel:{{ appSettings('mobile') }}">{{ appSettings('mobile') }}</a></span>
-                        </li> --}}
+                        </li>
+                        @endif
                         <li class="flex items-center space-x-2">
                             <span class="text-gray-500">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

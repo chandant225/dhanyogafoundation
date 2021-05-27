@@ -64,6 +64,7 @@
                 <div class="form-group">
                     <x-form.label>Mobile</x-form.label>
                     <x-fields.input name="mobile" :value="old('mobile', appSettings('mobile'))" />
+                    <small>Leave empty to hide phone number</small>
                 </div>
 
                 <div class="form-group">
