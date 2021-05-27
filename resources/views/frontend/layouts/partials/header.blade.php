@@ -23,7 +23,7 @@
                 </button>
                 <div class="absolute w-40 bg-white shadow rounded py-2 px-3 z-50" x-show="open" x-cloak>
                     <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('About Us') }}</a>
-                    <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('Vision and mission') }}</a>
+                    <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ getPageUrlBySlug(appSettings('vision_and_mission_page_url')) }}">{{ __('Vision and mission') }}</a>
                     <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ route('static-page.core-values') }}">{{ __('Core Values') }}</a>
                     <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ route('our-team.index') }}">{{ __('Our Team') }}</a>
                     <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('FAQ') }}</a>

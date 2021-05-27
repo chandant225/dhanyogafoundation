@@ -25,6 +25,7 @@ class PageSettingRequest extends FormRequest
     {
         return [
             'about_us_page_url' => 'nullable',
+            'vision_and_mission_page_url' => 'nullable',
             'state_disclosures_page_url' => 'nullable',
             'privacy_policy_page_url' => 'nullable',
             'terms_and_conditions_page_url' => 'nullable',
