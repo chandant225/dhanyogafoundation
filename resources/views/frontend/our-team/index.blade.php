@@ -12,19 +12,21 @@
         </x-slot>
     </x-frontend.partials.page-title>
 
-    <div class="container mx-auto py-4">
+    <div class="container mx-auto py-16 px-8">
         @foreach ($departments as $department)
         <div class="mb-5 sm:mb-8 md:mb-10">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl text-center text-indigo-900 font-bold tracking-wide my-4 sm:my-6 md:my-8">{{ $department->name }}</h1>
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 space-y-5 sm:space-y-0">
+            <div class="border-l-8 border-red-500 pl-4 my-8">
+                <h1 class="inline-block py-2 px-3 text-2xl sm:text-3xl text-red-500 font-semibold tracking-wider">{{ $department->name }}</h1>
+            </div>
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 space-y-5 sm:space-y-0 my-6">
                 @foreach ($department->members as $member)
-                <div class="flex flex-col items-center justify-center p-4">
-                    <div class="inline-flex shadow-lg border border-gray-200 rounded-full overflow-hidden h-40 w-40">
-                        <img class="h-full w-full" src="{{ $member->photoUrl() }}" alt="{{ $member->name }}">
+                <div class="">
+                    <div class="aspect-w-1 aspect-h-1">
+                        <img class="h-full w-full object-cover rounded-lg shadow-lg" src="{{ $member->photoUrl() }}" alt="{{ $member->name }}">
                     </div>
 
                     <h2 class="mt-4 font-bold text-xl">{{ $member->name }}</h2>
-                    <h6 class="mt-2 text-sm text-gray-500 font-medium italic">{{ $member->designation }}</h6>
+                    <h6 class="mt-2 text-gray-500 font-medium">{{ $member->designation }}</h6>
 
                     <ul class="flex flex-row mt-4 space-x-2">
                         <li>
