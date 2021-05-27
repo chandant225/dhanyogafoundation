@@ -56,6 +56,9 @@ Route::name('backend.')->group(function () {
     // Route::put('stores/{store}', 'StoreController@update')->name('stores.update');
     // Route::delete('stores/{store}', 'StoreController@destroy')->name('stores.destroy');
 
+    Route::get('departments', 'DepartmentController')->name('departments.index');
+    Route::get('our-team', 'OurTeamController@index')->name('our-team.index');
+
     Route::get('faqs', 'FaqController@index')->name('faqs.index');
     Route::get('faqs/create', 'FaqController@create')->name('faqs.create');
     Route::post('faqs', 'FaqController@store')->name('faqs.store');

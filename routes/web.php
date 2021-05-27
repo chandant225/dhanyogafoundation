@@ -30,6 +30,9 @@ Route::get('blogs/{post}', 'PostController@show')->name('posts.show');
 
 // Route::get('find-a-store', 'StoreController@index')->name('stores.index');
 
+Route::get('our-team', 'OurTeamController@index')->name('our-team.index');
+Route::get('our-team/{slug}', 'OurTeamController@show')->name('our-team.show');
+
 Route::get('contact-us', 'ContactUsController@index')->name('contact-us.index');
 
 Route::get('{page}', 'PageController@show')->name('frontend.pages.show');

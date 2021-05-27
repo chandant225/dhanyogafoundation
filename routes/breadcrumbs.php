@@ -1,5 +1,7 @@
 <?php
 
+use Diglactic\Breadcrumbs\Breadcrumbs;
+
 Breadcrumbs::for('home', function ($trail) {
     $trail->push('Home', route('home'));
 });
@@ -43,6 +45,12 @@ Breadcrumbs::for('product', function ($trail, $product) {
         $trail->parent('products');
     }
     $trail->push($product->name);
+});
+
+// Our Team
+Breadcrumbs::for('our-teams', function($trail) {
+    $trail->parent('home');
+    $trail->push('Our Teams');
 });
 
 Breadcrumbs::for('stores', function ($trail) {
