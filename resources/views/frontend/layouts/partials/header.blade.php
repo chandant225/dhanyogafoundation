@@ -12,7 +12,7 @@
         @include('frontend.layouts.partials.mobile-menu')
         <nav x-show="!show" class="hidden sm:flex items-center space-x-2 text-indigo-900 font-medium tracking-wide">
             <a class="py-2 px-3 hover:text-indigo-600" href="{{ url('/') }}">{{ __('Programs') }}</a>
-            <div class="inline-block relative" x-data="{ open: false }">
+            <div class="inline-block relative" x-data="{ open: false }"  @mouseover.away="open = false">
                 <button class="py-2 px-3 hover:text-indigo-600 font-medium tracking-wide focus:outline-none" x-on:mouseover="open = true">
                     <span>About</span>
                     <span>
@@ -21,10 +21,10 @@
                         </svg>
                     </span>
                 </button>
-                <div class="absolute w-40 bg-white shadow rounded py-2 px-3 z-50" x-show="open" @mouseover.away="show = false">
+                <div class="absolute w-40 bg-white shadow rounded py-2 px-3 z-50" x-show="open" >
                     <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('About Us') }}</a>
                     <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('Vision and mission') }}</a>
-                    <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('Core Values') }}</a>
+                    <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ route('static-page.core-values') }}">{{ __('Core Values') }}</a>
                     <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ route('our-team.index') }}">{{ __('Our Team') }}</a>
                     <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('FAQ') }}</a>
                 </div>

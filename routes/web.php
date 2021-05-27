@@ -35,4 +35,7 @@ Route::get('our-team/{slug}', 'OurTeamController@show')->name('our-team.show');
 
 Route::get('contact-us', 'ContactUsController@index')->name('contact-us.index');
 
+// Static Pages
+Route::view('core-values', 'frontend.static-page.core-values')->name('static-page.core-values');
+
 Route::get('{page}', 'PageController@show')->name('frontend.pages.show');
