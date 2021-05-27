@@ -29,7 +29,7 @@
                         <span class="text-xl sm:text-2xl md:text-4xl ">E</span>quiality
                     </x-slot>
                     <x-slot name="content">
-                        To respect the views, needs, and feelings of the community with whom we work. Encourage expression, suggestions, and opinions of people who work with us.
+                        We work on the principal of equality and fairness. We strive to eliminate discrimination through equal opportunities and facilities for all individuals.
                     </x-slot>
                 </x-frontend.partials.squeeze-box>
 
@@ -38,7 +38,7 @@
                         <span class="text-xl sm:text-2xl md:text-4xl ">S</span>elfless Service
                     </x-slot>
                     <x-slot name="content">
-                        To respect the views, needs, and feelings of the community with whom we work. Encourage expression, suggestions, and opinions of people who work with us.
+                        Working selflessly for the betterment of the humanity is what we at DYF strive for in each action that we perform.
                     </x-slot>
                 </x-frontend.partials.squeeze-box>
 
@@ -47,7 +47,7 @@
                         <span class="text-xl sm:text-2xl md:text-4xl ">P</span>assion
                     </x-slot>
                     <x-slot name="content">
-                        To respect the views, needs, and feelings of the community with whom we work. Encourage expression, suggestions, and opinions of people who work with us.
+                        To work with enthusiasm and zeal to bring in positive change in the lives of the people for whom we work.
                     </x-slot>
                 </x-frontend.partials.squeeze-box>
 
@@ -56,7 +56,7 @@
                         <span class="text-xl sm:text-2xl md:text-4xl ">E</span>mpathy
                     </x-slot>
                     <x-slot name="content">
-                        To respect the views, needs, and feelings of the community with whom we work. Encourage expression, suggestions, and opinions of people who work with us.
+                        To work with empathy, to understand the feelings and mind-set of the people for whom we work.
                     </x-slot>
                 </x-frontend.partials.squeeze-box>
 
@@ -65,7 +65,7 @@
                         <span class="text-xl sm:text-2xl md:text-4xl ">C</span>ompassion & Commitment
                     </x-slot>
                     <x-slot name="content">
-                        To respect the views, needs, and feelings of the community with whom we work. Encourage expression, suggestions, and opinions of people who work with us.
+                        To work with compassion and commitment to develop trust and reliance of the community where we work.
                     </x-slot>
                 </x-frontend.partials.squeeze-box>
 
@@ -74,7 +74,7 @@
                         <span class="text-xl sm:text-2xl md:text-4xl ">T</span>ransparency
                     </x-slot>
                     <x-slot name="content">
-                        To respect the views, needs, and feelings of the community with whom we work. Encourage expression, suggestions, and opinions of people who work with us.
+                        To work with consistency and transparency to ensure trustworthiness in what we do.
                     </x-slot>
                 </x-frontend.partials.squeeze-box>
             </div>
