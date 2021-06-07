@@ -2,24 +2,24 @@
     <x-frontend.partials.primary-image-slider />
 
     {{-- <div class="relative" style="background-image: url({{ asset('assets/images/temp/banner.jpg') }}); background-size: cover; min-height: 690px;">
-        <div class="backdrop-filter backdrop-brightness-90 absolute w-full h-full p-5 flex items-center justify-center">
-            <div class="text-center">
-                <section class="text-white">
-                    <h1 class="text-4xl md:text-5xl my-4 font-semibold tracking-wide">The Secret to Living is Giving.</h1>
-                    <p class="tracking-wide">
-                        “Only those who have learned the power of sincere &amp; selfless contribution<br>
-                        experience life’s deepest joy: true fulfillment.”
-                    </p>
-                    <p>TONY ROBBINS</p>
-                    <div class="mt-5" data-aos="fade-up">
-                        <a class="py-2 px-5 border-2 border-blue-600 bg-blue-600 text-white hover:bg-white hover:text-blue-600 sm:mr-3" href="/donate/">DONATE</a>
-                        <a class="py-2 px-5 border-2 border-red-600 bg-red-600 text-white hover:bg-white hover:text-red-600" href="/programs/volunteer-program/">VOLUNTEER</a>
-                    </div>
-                </section>
-            </div>
-        </div> --}}
-      
-        {{-- <div class=" absolute bottom-0 w-full">
+    <div class="backdrop-filter backdrop-brightness-90 absolute w-full h-full p-5 flex items-center justify-center">
+        <div class="text-center">
+            <section class="text-white">
+                <h1 class="text-4xl md:text-5xl my-4 font-semibold tracking-wide">The Secret to Living is Giving.</h1>
+                <p class="tracking-wide">
+                    “Only those who have learned the power of sincere &amp; selfless contribution<br>
+                    experience life’s deepest joy: true fulfillment.”
+                </p>
+                <p>TONY ROBBINS</p>
+                <div class="mt-5" data-aos="fade-up">
+                    <a class="py-2 px-5 border-2 border-blue-600 bg-blue-600 text-white hover:bg-white hover:text-blue-600 sm:mr-3" href="/donate/">DONATE</a>
+                    <a class="py-2 px-5 border-2 border-red-600 bg-red-600 text-white hover:bg-white hover:text-red-600" href="/programs/volunteer-program/">VOLUNTEER</a>
+                </div>
+            </section>
+        </div>
+    </div> --}}
+
+    {{-- <div class=" absolute bottom-0 w-full">
             <svg class="w-full h-32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                 <defs>
                     <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
@@ -188,10 +188,11 @@
         </div>
     </section>
 
-
     <x-faq-section></x-faq-section>
 
-    @includeIf('frontend.welcome.latest-blogs', [appSettings('show_latest_blogs_section') => 'yes'])
+    @if(appSettings('show_latest_blogs_section') == 'yes')
+    <x-latest-blogs-section></x-latest-blogs-section>
+    @endif
 
     <section class="bg-no-repeat bg-cover bg-center sm:bg-left pb-36" style="background-image: url(/assets/images/transport-bg3.webp);">
         <div class="container mx-auto py-16 px-4">
@@ -261,5 +262,5 @@
         </div>
     </section>
 
-   <x-testimonial-section></x-testimonial-section>
+    <x-testimonial-section></x-testimonial-section>
 </x-app-layout>
