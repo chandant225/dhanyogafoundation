@@ -42,7 +42,6 @@
                      @foreach ($testimonials as $testimonial)
                      <div x-show.immediate="testimonialActive === {{ $loop->iteration }}">
                          <p class="text-gray-600 font-zilla-slab font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl" x-show.transition="testimonialActive == {{ $loop->iteration }}">
-                             Contnet
                              {{ $testimonial->content }}
                          </p>
                      </div>
