@@ -98,6 +98,83 @@
                             </div>
                         </div>
                     </div>
+
+                    {{-- Our Programs --}}
+                    <div id="our-programs" class="card shadow-0 shadow-sm">
+                        <div class="card-header bg-light">
+                            <h5 class="h5-responsive">{{ __('Our Programs Section') }}</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <x-form.label>Section Title</x-form.label>
+                                <x-fields.input name="hp_our_programs_section_title" :value="old('hp_our_programs_section_title', appSettings('hp_our_programs_section_title'))" />
+                            </div>
+                            <div class="row">
+                                {{-- First --}}
+                                <div class="col-md-6">
+                                    <div class="card bg-light border shadow-none">
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <x-form.label>Title</x-form.label>
+                                                <x-fields.input name="hp_our_programs_one_title" :value="old('hp_our_programs_one_title', appSettings('hp_our_programs_one_title'))" />
+                                            </div>
+                                            <div class="form-group">
+                                                <x-form.label>Description</x-form.label>
+                                                <textarea name="hp_our_programs_one_desc" class="form-control" rows="10">{{ old('hp_our_programs_one_desc', appSettings('hp_our_programs_one_desc')) }}</textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <x-form.label>Link</x-form.label>
+                                                <x-fields.input name="hp_our_programs_one_link" :value="old('hp_our_programs_one_link', appSettings('hp_our_programs_one_link'))" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{-- Second --}}
+                                <div class="col-md-6">
+                                    <div class="card bg-light border shadow-none">
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <x-form.label>Title</x-form.label>
+                                                <x-fields.input name="hp_our_programs_two_title" :value="old('hp_our_programs_two_title', appSettings('hp_our_programs_two_title'))" />
+                                            </div>
+                                            <div class="form-group">
+                                                <x-form.label>Description</x-form.label>
+                                                <textarea name="hp_our_programs_two_desc" class="form-control" rows="10">{{ old('hp_our_programs_two_desc', appSettings('hp_our_programs_two_desc')) }}</textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <x-form.label>Link</x-form.label>
+                                                <x-fields.input name="hp_our_programs_two_link" :value="old('hp_our_programs_two_link', appSettings('hp_our_programs_two_link'))" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{-- Third --}}
+                                <div class="col-md-6">
+                                    <div class="card bg-light border shadow-none">
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <x-form.label>Title</x-form.label>
+                                                <x-fields.input name="hp_our_programs_three_title" :value="old('hp_our_programs_three_title', appSettings('hp_our_programs_three_title'))" />
+                                            </div>
+                                            <div class="form-group">
+                                                <x-form.label>Description</x-form.label>
+                                                <textarea name="hp_our_programs_three_desc" class="form-control" rows="10">{{ old('hp_our_programs_three_desc', appSettings('hp_our_programs_three_desc')) }}</textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <x-form.label>Link</x-form.label>
+                                                <x-fields.input name="hp_our_programs_three_link" :value="old('hp_our_programs_three_link', appSettings('hp_our_programs_three_link'))" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary px-4">Save</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </form>
         </div>
@@ -105,9 +182,11 @@
         <div class="col-md-3">
             <nav id="homepagesetting" class="navbar navbar-light bg-white rounded-lg shadow-sm sticky-top" style="top: 20px;">
                 <nav class="nav nav-pills flex-column">
+                    <h6 class="nav-link font-weight-bolder mb-0">ON THIS PAGE</h6>
                     <a class="nav-link" href="#topbar">Topbar</a>
                     <a class="nav-link" href="#our-mission">Our Mission Section</a>
                     <a class="nav-link" href="#blogs">Latest Blogs Section</a>
+                    <a class="nav-link" href="#our-programs">Our Programs Section</a>
                 </nav>
             </nav>
         </div>

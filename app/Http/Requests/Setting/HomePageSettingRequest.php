@@ -37,6 +37,20 @@ class HomePageSettingRequest extends FormRequest
             'show_latest_blogs_section' => 'nullable',
             'latest_blogs_section_title' => 'nullable',
             'latest_blogs_display_count' => 'nullable',
+
+            'hp_our_programs_section_title' => 'nullable',
+
+            'hp_our_programs_one_title' => 'nullable',
+            'hp_our_programs_one_desc' => 'nullable',
+            'hp_our_programs_one_link' => 'nullable',
+
+            'hp_our_programs_two_title' => 'nullable',
+            'hp_our_programs_two_desc' => 'nullable',
+            'hp_our_programs_two_link' => 'nullable',
+
+            'hp_our_programs_three_title' => 'nullable',
+            'hp_our_programs_three_desc' => 'nullable',
+            'hp_our_programs_three_link' => 'nullable',
         ];
     }
 }
