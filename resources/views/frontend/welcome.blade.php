@@ -188,8 +188,6 @@
         </div>
     </section>
 
-    <x-faq-section></x-faq-section>
-
     @if(appSettings('show_latest_blogs_section') == 'yes')
     <x-latest-blogs-section></x-latest-blogs-section>
     @endif

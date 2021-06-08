@@ -34,10 +34,10 @@ Route::get('our-team', 'OurTeamController@index')->name('our-team.index');
 Route::get('our-team/{slug}', 'OurTeamController@show')->name('our-team.show');
 
 Route::get('financials-reports', 'ReportController@index')->name('reports.index');
-
 Route::get('contact-us', 'ContactUsController@index')->name('contact-us.index');
 
 // Static Pages
 Route::view('core-values', 'frontend.static-page.core-values')->name('static-page.core-values');
+Route::view('faq', 'frontend.static-page.faq')->name('static-page.faq');
 
 Route::get('{page}', 'PageController@show')->name('frontend.pages.show');
