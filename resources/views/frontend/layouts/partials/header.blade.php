@@ -1,8 +1,9 @@
 @includeIf('frontend.layouts.partials.topbar-notice', [appSettings('show_topbar_notice') => 'yes'])
 <header>
+    <div id="navbar-overlay" class="fixed bg-blue-50 opacity-0 rounded transition-all duration-300"></div>
     <div class="container mx-auto flex justify-between items-center space-x-2 py-3 px-2 lg:px-6" x-data="{ show: false }">
         <a class="navbar-brand logo" href="{{ url('/') }}">
-            <img class="h-16" src="{{ siteLogoUrl() }}" alt="{{ siteName() }}">
+        <img class="h-16" src="{{ siteLogoUrl() }}" alt="{{ siteName() }}">
         </a>
         <button class="sm:hidden text-gray-700" type="button" @click="show = !show" x-cloak>
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -10,9 +11,9 @@
             </svg>
         </button>
         @include('frontend.layouts.partials.mobile-menu')
-        <nav x-show="!show" class="hidden sm:flex items-center space-x-2 text-indigo-900 font-medium tracking-wide">
+        <nav id="desktop-menu" x-show="!show" class="hidden sm:flex items-center space-x- text-indigo-900 font-medium tracking-wide">
             <a class="py-2 px-3 hover:text-indigo-600" href="{{ url('/') }}">{{ __('Programs') }}</a>
-            <div class="inline-block relative" x-data="{ open: false }"  @mouseover.away="open = false">
+            <div class="relative" x-data="{ open: false }" @mouseover.away="open = false">
                 <button class="py-2 px-3 hover:text-indigo-600 font-medium tracking-wide focus:outline-none" x-on:mouseover="open = true">
                     <span>About</span>
                     <span>
@@ -21,12 +22,12 @@
                         </svg>
                     </span>
                 </button>
-                <div class="absolute w-40 bg-white shadow rounded py-2 px-3 z-50" x-show="open" x-cloak>
-                    <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('About Us') }}</a>
-                    <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ getPageUrlBySlug(appSettings('vision_and_mission_page_url')) }}">{{ __('Vision and mission') }}</a>
-                    <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ route('static-page.core-values') }}">{{ __('Core Values') }}</a>
-                    <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ route('our-team.index') }}">{{ __('Our Team') }}</a>
-                    <a class="inline-block py-2 px-3 hover:text-indigo-600" href="{{ route('static-page.faq') }}">{{ __('FAQ') }}</a>
+                <div class="absolute w-48 bg-white shadow-lg rounded-md py-2 z-50 transition-all duration-1000" x-show="open" x-cloak>
+                    <a class="block py-2 px-3 hover:text-indigo-600 hover:bg-blue-50" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('About Us') }}</a>
+                    <a class="block py-2 px-3 hover:text-indigo-600 hover:bg-blue-50" href="{{ getPageUrlBySlug(appSettings('vision_and_mission_page_url')) }}">{{ __('Vision and mission') }}</a>
+                    <a class="block py-2 px-3 hover:text-indigo-600 hover:bg-blue-50" href="{{ route('static-page.core-values') }}">{{ __('Core Values') }}</a>
+                    <a class="block py-2 px-3 hover:text-indigo-600 hover:bg-blue-50" href="{{ route('our-team.index') }}">{{ __('Our Team') }}</a>
+                    <a class="block py-2 px-3 hover:text-indigo-600 hover:bg-blue-50" href="{{ route('static-page.faq') }}">{{ __('FAQ') }}</a>
                 </div>
             </div>
             <a class="py-2 px-3 hover:text-indigo-600" href="{{ url('/') }}">{{ __('Volunteer') }}</a>
@@ -38,3 +39,35 @@
         </nav>
     </div>
 </header>
+@push('scripts')
+<style>
+    #navbar-overlay {
+        z-index: -1;
+    }
+
+    #navbar-overlay.active {
+        opacity: 1;
+    }
+
+</style>
+<script>
+    const navbarOverlay = document.getElementById('navbar-overlay');
+    const navList = document.querySelectorAll('#desktop-menu > *');
+
+    navList.forEach(navItem => {
+        navItem.addEventListener('mouseover', () => {
+            navbarOverlay.classList.add('active');
+            let position = navItem.getBoundingClientRect();
+            navbarOverlay.style.left = position.left + 'px';
+            navbarOverlay.style.top = position.top + 'px';
+            navbarOverlay.style.width = position.width + 'px';
+            navbarOverlay.style.height = position.height + 'px';
+        });
+
+        navItem.addEventListener('mouseout', () => {
+            navbarOverlay.classList.remove('active');
+        });
+    });
+
+</script>
+@endpush
