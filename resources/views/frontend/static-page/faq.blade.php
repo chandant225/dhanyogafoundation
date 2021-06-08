@@ -14,7 +14,7 @@
 
     <div class="container mx-auto">
         <div class="py-5 px-4">
-            <div class="py-10 max-w-screen-sm mx-auto">
+            <div class="py-10 max-w-screen-xl mx-auto">
 
                 <x-faq-section></x-faq-section>
 
