@@ -35,6 +35,7 @@ class GeneralSettingRequest extends FormRequest
             'address' => 'nullable',
 
             'price_unit' => 'nullable',
+            'donate_link' => 'nullable',
 
             'facebook_url' => 'nullable',
             'twitter_url' => 'nullable',

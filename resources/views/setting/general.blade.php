@@ -81,6 +81,11 @@
                     <x-form.label>Currency unit</x-form.label>
                     <x-fields.input name="price_unit" :value="old('price_unit', appSettings('price_unit'))" />
                 </div>
+
+                <div class="form-group">
+                    <x-form.label>Donate Link</x-form.label>
+                    <x-fields.input name="donate_link" :value="old('donate_link', appSettings('donate_link'))" />
+                </div>
                 
                 <div class="form-group">
                     <x-form.label>Facebook Page Url</x-form.label>

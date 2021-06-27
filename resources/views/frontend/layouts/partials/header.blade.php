@@ -12,9 +12,9 @@
         </button>
         @include('frontend.layouts.partials.mobile-menu')
         <nav id="desktop-menu" x-show="!show" class="hidden sm:flex items-center space-x- text-indigo-900 font-medium tracking-wide">
-            <a class="py-2 px-3 hover:text-indigo-600" href="{{ url('/') }}">{{ __('Programs') }}</a>
+            <a class="py-2 px-3 hover:text-primary" href="{{ url('/') }}">{{ __('Programs') }}</a>
             <div class="relative" x-data="{ open: false }" @mouseover.away="open = false">
-                <button class="py-2 px-3 hover:text-indigo-600 font-medium tracking-wide focus:outline-none" x-on:mouseover="open = true">
+                <button class="py-2 px-3 hover:text-primary font-medium tracking-wide focus:outline-none" x-on:mouseover="open = true">
                     <span>About</span>
                     <span>
                         <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
@@ -23,19 +23,19 @@
                     </span>
                 </button>
                 <div class="absolute w-48 bg-white shadow-lg rounded-md py-2 z-50 transition-all duration-1000" x-show="open" x-cloak>
-                    <a class="block py-2 px-3 hover:text-indigo-600 hover:bg-blue-50" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('About Us') }}</a>
-                    <a class="block py-2 px-3 hover:text-indigo-600 hover:bg-blue-50" href="{{ getPageUrlBySlug(appSettings('vision_and_mission_page_url')) }}">{{ __('Vision and mission') }}</a>
-                    <a class="block py-2 px-3 hover:text-indigo-600 hover:bg-blue-50" href="{{ route('static-page.core-values') }}">{{ __('Core Values') }}</a>
-                    <a class="block py-2 px-3 hover:text-indigo-600 hover:bg-blue-50" href="{{ route('our-team.index') }}">{{ __('Our Team') }}</a>
-                    <a class="block py-2 px-3 hover:text-indigo-600 hover:bg-blue-50" href="{{ route('static-page.faq') }}">{{ __('FAQ') }}</a>
+                    <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('About Us') }}</a>
+                    <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="{{ getPageUrlBySlug(appSettings('vision_and_mission_page_url')) }}">{{ __('Vision and mission') }}</a>
+                    <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="{{ route('static-page.core-values') }}">{{ __('Core Values') }}</a>
+                    <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="{{ route('our-team.index') }}">{{ __('Our Team') }}</a>
+                    <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="{{ route('static-page.faq') }}">{{ __('FAQ') }}</a>
                 </div>
             </div>
-            <a class="py-2 px-3 hover:text-indigo-600" href="{{ url('/') }}">{{ __('Volunteer') }}</a>
-            <a class="py-2 px-3 hover:text-indigo-600" href="{{ route('posts.index') }}">{{ __('Blogs') }}</a>
-            <a class="py-2 px-3 hover:text-indigo-600" href="{{ route('reports.index') }}">{{ __('Financials/Reports') }}</a>
-            <a class="py-2 px-3 hover:text-indigo-600" href="{{ route('contact-us.index') }}">{{ __('Contact') }}</a>
-            {{-- <a class="py-2 px-3 hover:text-indigo-600" href="{{ url('/') }}">{{ __('Shop') }}</a> --}}
-            <a class="py-2 px-3 bg-red-500 hover:bg-opacity-80 text-white rounded-md font-semibold " href="{{ url('/') }}">{{ __('Donate') }}</a>
+            <a class="py-2 px-3 hover:text-primary" href="{{ url('/') }}">{{ __('Volunteer') }}</a>
+            <a class="py-2 px-3 hover:text-primary" href="{{ route('posts.index') }}">{{ __('Blogs') }}</a>
+            <a class="py-2 px-3 hover:text-primary" href="{{ route('reports.index') }}">{{ __('Financials/Reports') }}</a>
+            <a class="py-2 px-3 hover:text-primary" href="{{ route('contact-us.index') }}">{{ __('Contact') }}</a>
+            {{-- <a class="py-2 px-3 hover:text-primary" href="{{ url('/') }}">{{ __('Shop') }}</a> --}}
+            <a class="py-2 px-3 bg-primary hover:bg-opacity-80 text-white rounded-md font-semibold " href="{{ appSettings('donate_link') }}" target="_blank">{{ __('Donate') }}</a>
         </nav>
     </div>
 </header>

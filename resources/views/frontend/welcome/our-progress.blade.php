@@ -1,4 +1,4 @@
-<section class="bg-indigo-500 text-white">
+<section class="bg-primary text-white">
     <div class="container mx-auto text-center py-16 px-4">
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide">Our Progress</h1>
         <div class="sm:grid grid-cols-3 gap-4 my-8 max-w-6xl mx-auto space-y-5 sm:space-y-0">

@@ -21,7 +21,7 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/owl-carousel/css/owl.carousel.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/owl-carousel/css/owl.theme.default.min.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('starter.css') }}" />
+    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('starter.css') }}" /> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/frontend.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/line-clamp.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">

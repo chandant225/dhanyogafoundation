@@ -7,7 +7,7 @@
             @endforeach
         </div>
         <div class="mt-6 text-center">
-            <a class="inline-block py-2 px-5 border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white uppercase font-semibold tracking-wide" href="{{ route('posts.index') }}">View More</a>
+            <a class="inline-block py-2 px-5 border-2 border-primary text-primary hover:bg-primary hover:text-white uppercase font-semibold tracking-wide" href="{{ route('posts.index') }}">View More</a>
         </div>
     </div>
 </section>

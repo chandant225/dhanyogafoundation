@@ -13,9 +13,9 @@
                             @endif
                             <div class="mt-5" data-aos="fade-up">
                                 @if ($slide->action_link)
-                                <a class="py-2 px-5 border-2 border-blue-600 bg-blue-600 text-white uppercase hover:bg-white hover:text-blue-600 sm:mr-3" href="{{ $slide->action_link }}" @if($slide->open_in_new_tab) target="_blank" @endif>{{ $slide->action_button_text ?? 'Donate' }}</a>
+                                <a class="py-2 px-5 border-2 border-primary bg-primary text-white uppercase hover:bg-white hover:text-primary sm:mr-3" href="{{ $slide->action_link }}" @if($slide->open_in_new_tab) target="_blank" @endif>{{ $slide->action_button_text ?? 'Donate' }}</a>
                                 @endif
-                                <a class="py-2 px-5 border-2 border-red-600 bg-red-600 text-white uppercase hover:bg-white hover:text-red-600" href="/programs/volunteer-program/">VOLUNTEER</a>
+                                <a class="py-2 px-5 border-2 border-secondary bg-secondary text-white uppercase hover:bg-white hover:text-secondary" href="/programs/volunteer-program/">VOLUNTEER</a>
                             </div>
                         </section>
                     </div>

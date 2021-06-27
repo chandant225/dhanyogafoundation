@@ -32,7 +32,7 @@ class OurTeam extends Model
     {
         return $this->photo
             ? Storage::url($this->photo)
-            : 'https://ui-avatars.com/api/?name=' . urlencode($this->name) . '&color=fff&background=4f46e5';
+            : 'https://ui-avatars.com/api/?name=' . urlencode($this->name) . '&color=fff&background=1e94a1';
     }
 
     public function department()

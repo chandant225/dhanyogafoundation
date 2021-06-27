@@ -7,14 +7,27 @@ module.exports = {
     ],
     darkMode: false, // or 'media' or 'class'
     theme: {
-        extend: {}
+        extend: {
+            colors: {
+                primary: {
+                    light: "#39cfdf",
+                    DEFAULT: "#1e94a1",
+                    dark: "#1e94a1"
+                },
+                secondary: {
+                    light: "#e97888",
+                    DEFAULT: "#9a1f5f",
+                    dark: "#971023"
+                }
+            }
+        }
     },
     variants: {
         extend: {}
     },
     plugins: [
-        require('@tailwindcss/aspect-ratio'),
-        require('@tailwindcss/typography'),
-        require('@tailwindcss/forms'),
+        require("@tailwindcss/aspect-ratio"),
+        require("@tailwindcss/typography"),
+        require("@tailwindcss/forms")
     ]
 };

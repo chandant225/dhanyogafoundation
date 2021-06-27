@@ -17,19 +17,19 @@
             <table class="table-auto w-full">
                 <thead>
                     <tr>
-                        <td class="py-2 px-4 border bg-gray-50">#</td>
-                        <td class="py-2 px-4 border bg-gray-50">Title</td>
-                        <td class="py-2 px-4 border bg-gray-50"></td>
-                        <td class="py-2 px-4 border bg-gray-50 text-center"></td>
+                        <td class="py-2 px-4 border border-secondary bg-secondary text-gray-50">#</td>
+                        <td class="py-2 px-4 border border-secondary bg-secondary text-gray-50">Title</td>
+                        <td class="py-2 px-4 border border-secondary bg-secondary text-gray-50"></td>
+                        <td class="py-2 px-4 border border-secondary bg-secondary text-gray-50 text-center"></td>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($downloads as $download)
                     <tr>
-                        <td class="py-2 px-4 border">{{ $loop->iteration + $downloads->firstItem() - 1 }}</td>
-                        <td class="py-2 px-4 border">{{ $download->title }}</td>
-                        <td class="py-2 px-4 border"><div class="inline-block text-xs bg-indigo-50 text-indigo-900 py-1 px-2 rounded">{{ $download->category }}</div></td>
-                        <td class="py-2 px-4 border text-center"><a class="text-indigo-600 hover:underline" href="{{ $download->fileUrl() }}">Download</a></td>
+                        <td class="py-2 px-4 border border-secondary">{{ $loop->iteration + $downloads->firstItem() - 1 }}</td>
+                        <td class="py-2 px-4 border border-secondary">{{ $download->title }}</td>
+                        <td class="py-2 px-4 border border-secondary"><div class="inline-block text-xs bg-indigo-50 text-primary py-1 px-2 rounded">{{ $download->category }}</div></td>
+                        <td class="py-2 px-4 border border-secondary text-center"><a class="text-primary hover:underline" href="{{ $download->fileUrl() }}">Download</a></td>
                     </tr>
                     @endforeach
                 </tbody>

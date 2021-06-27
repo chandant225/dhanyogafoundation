@@ -13,7 +13,7 @@
                 <p>TONY ROBBINS</p>
                 <div class="mt-5" data-aos="fade-up">
                     <a class="py-2 px-5 border-2 border-blue-600 bg-blue-600 text-white hover:bg-white hover:text-blue-600 sm:mr-3" href="/donate/">DONATE</a>
-                    <a class="py-2 px-5 border-2 border-red-600 bg-red-600 text-white hover:bg-white hover:text-red-600" href="/programs/volunteer-program/">VOLUNTEER</a>
+                    <a class="py-2 px-5 border-2 border-red-600 bg-red-600 text-white hover:bg-white hover:text-secondary" href="/programs/volunteer-program/">VOLUNTEER</a>
                 </div>
             </section>
         </div>
@@ -129,7 +129,7 @@
                         a world without poverty. You can make a difference!
                     </p>
                     <div class="mt-6">
-                        <a class="inline-block py-3 px-5 border-2 border-red-600 bg-red-600 text-white font-semibold rounded-full hover:bg-white hover:text-red-600" href="#">Become a Volunteer</a>
+                        <a class="inline-block py-3 px-5 border-2 border-secondary bg-secondary text-white font-semibold rounded-full hover:bg-white hover:text-secondary" href="#">Become a Volunteer</a>
                     </div>
                 </div>
             </div>
@@ -137,50 +137,50 @@
         <div class="-mt-32 px-10">
             <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 space-y-5 sm:space-y-0">
                 <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" aos-anchor-placement="bottom-bottom">
-                    <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-red-500">
-                        <div class="text-red-600">
+                    <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
+                        <div class="text-secondary">
                             <img class="inline-flex w-10 h-10" src="{{ asset('assets/images/mini/ngo-icon1.webp') }}" alt="">
                         </div>
                         <div class="">
                             <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Environment</h4>
                             <p class="text-gray-500 my-4">We save and protect an lives in times of crisis.</p>
-                            <a class="text-red-600 hover:text-blue-900 font-medium tracking-wide" href="#" target="_self">Learn More</a>
+                            <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" aos-anchor-placement="bottom-bottom">
-                    <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-red-500">
-                        <div class="text-red-600">
+                    <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
+                        <div class="text-secondary">
                             <img class="inline-flex w-10 h-10" src="{{ asset('assets/images/mini/ngo-icon2.webp') }}" alt="">
                         </div>
                         <div class="">
                             <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Nutrition</h4>
                             <p class="text-gray-500 my-4">We save and protect an lives in times of crisis.</p>
-                            <a class="text-red-600 hover:text-blue-900 font-medium tracking-wide" href="#" target="_self">Learn More</a>
+                            <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" aos-anchor-placement="bottom-bottom">
-                    <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-red-500">
-                        <div class="text-red-600">
+                    <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
+                        <div class="text-secondary">
                             <img class="inline-flex w-10 h-10" src="{{ asset('assets/images/mini/ngo-icon3.webp') }}" alt="">
                         </div>
                         <div class="">
                             <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Health</h4>
                             <p class="text-gray-500 my-4">We save and protect an lives in times of crisis.</p>
-                            <a class="text-red-600 hover:text-blue-900 font-medium tracking-wide" href="#" target="_self">Learn More</a>
+                            <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" aos-anchor-placement="bottom-bottom">
-                    <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-red-500">
-                        <div class="text-red-600">
+                    <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
+                        <div class="text-secondary">
                             <img class="inline-flex w-10 h-10" src="{{ asset('assets/images/mini/ngo-icon4.webp') }}" alt="">
                         </div>
                         <div class="">
                             <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Development</h4>
                             <p class="text-gray-500 my-4">We save and protect an lives in times of crisis.</p>
-                            <a class="text-red-600 hover:text-blue-900 font-medium tracking-wide" href="#" target="_self">Learn More</a>
+                            <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -198,8 +198,8 @@
                 <h2 class="text-lg sm:text-3xl md:text-3xl text-indigo-900 font-bold text-center tracking-wide leading-relaxed mb-16">We work in over 190 countries and territories<br> to save people’s lives and their rights</h2>
                 <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 space-y-5 sm:space-y-0">
                     <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" aos-anchor-placement="bottom-bottom">
-                        <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-red-500">
-                            <div class="text-red-600">
+                        <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
+                            <div class="text-secondary">
                                 <svg class="inline-flex w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                 </svg>
@@ -207,13 +207,13 @@
                             <div class="">
                                 <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Contact</h4>
                                 <p class="text-gray-500 my-4">We'd love to talk about how we can work together.</p>
-                                <a class="text-red-600 hover:text-blue-900 font-medium tracking-wide" href="#" target="_self">Contact Us</a>
+                                <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Contact Us</a>
                             </div>
                         </div>
                     </div>
                     <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" aos-anchor-placement="bottom-bottom">
-                        <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-red-500">
-                            <div class="text-red-600">
+                        <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
+                            <div class="text-secondary">
                                 <svg class="inline-flex w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
                                 </svg>
@@ -221,13 +221,13 @@
                             <div class="">
                                 <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Location</h4>
                                 <p class="text-gray-500 my-4">View a directory of our locations worldwide.</p>
-                                <a class="text-red-600 hover:text-blue-900 font-medium tracking-wide" href="#" target="_self">View Locations</a>
+                                <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">View Locations</a>
                             </div>
                         </div>
                     </div>
                     <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" aos-anchor-placement="bottom-bottom">
-                        <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-red-500">
-                            <div class="text-red-600">
+                        <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
+                            <div class="text-secondary">
                                 <svg class="inline-flex w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
@@ -235,13 +235,13 @@
                             <div class="">
                                 <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Donations</h4>
                                 <p class="text-gray-500 my-4">Get involved in making the dream a reality today.</p>
-                                <a class="text-red-600 hover:text-blue-900 font-medium tracking-wide" href="#" target="_self">Keep in Touch</a>
+                                <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Keep in Touch</a>
                             </div>
                         </div>
                     </div>
                     <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" aos-anchor-placement="bottom-bottom">
-                        <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-red-500">
-                            <div class="text-red-600">
+                        <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
+                            <div class="text-secondary">
                                 <svg class="inline-flex w-16 h-16" fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19.25 16V12.25C19.25 8.24594 16.0041 5 12 5V5C7.99594 5 4.75 8.24594 4.75 12.25V16"></path>
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4.75 15.45C4.75 13.9588 5.95883 12.75 7.45 12.75V12.75C8.44411 12.75 9.25 13.5559 9.25 14.55V17.45C9.25 18.4441 8.44411 19.25 7.45 19.25V19.25C5.95883 19.25 4.75 18.0412 4.75 16.55V15.45Z"></path>
@@ -251,7 +251,7 @@
                             <div class="">
                                 <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Support</h4>
                                 <p class="text-gray-500 my-4">We're here to help with any questions or queries.</p>
-                                <a class="text-red-600 hover:text-blue-900 font-medium tracking-wide" href="#" target="_self">Help & Support</a>
+                                <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Help & Support</a>
                             </div>
                         </div>
                     </div>
