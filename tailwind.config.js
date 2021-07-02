@@ -19,11 +19,16 @@ module.exports = {
                     DEFAULT: "#9a1f5f",
                     dark: "#971023"
                 }
+            },
+            transitionProperty: {
+                width: "width"
             }
         }
     },
     variants: {
-        extend: {}
+        extend: {
+            width: ["group-hover"]
+        }
     },
     plugins: [
         require("@tailwindcss/aspect-ratio"),

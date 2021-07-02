@@ -1,6 +1,9 @@
 <section class="bg-gray-100 ">
     <div class="container mx-auto py-16 px-4">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl text-center text-primary font-semibold tracking-wide mb-8">{{ appSettings('hp_our_programs_section_title') }}</h1>
+        <div class="group">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl text-center text-primary font-semibold tracking-wide">{{ appSettings('hp_our_programs_section_title') }}</h1>
+            <div class="h-1 w-32 bg-primary mx-auto rounded-full mt-5 mb-8 group-hover:w-96 group-hover:bg-secondary transition-all linear duration-300"></div>
+        </div>
         <div class="sm:grid grid-cols-3 gap-4 space-y-5 sm:space-y-0">
             @php
             $programKeys = ['hp_our_programs_one_', 'hp_our_programs_two_', 'hp_our_programs_three_']

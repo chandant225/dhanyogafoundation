@@ -19795,11 +19795,35 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "" } }, [_vm._v("Job Description")]),
+              _vm._v(" "),
+              _c("textarea", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.form.description,
+                    expression: "form.description"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { id: "description", cols: "30", rows: "10" },
+                domProps: { value: _vm.form.description },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.form, "description", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
             _vm._m(0),
             _vm._v(" "),
             _vm._m(1),
-            _vm._v(" "),
-            _vm._m(2),
             _vm._v(" "),
             _c(
               "div",
@@ -19807,39 +19831,21 @@ var render = function() {
               [
                 _c("div", { attrs: { id: "question-form-wrapper" } }),
                 _vm._v(" "),
-                [_vm._m(3)],
+                [_vm._m(2)],
                 _vm._v(" "),
-                _vm._m(4)
+                _vm._m(3)
               ],
               2
             )
           ]),
           _vm._v(" "),
-          _vm._m(5)
+          _vm._m(4)
         ])
       ]
     )
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("label", { attrs: { for: "" } }, [_vm._v("Job Description")]),
-      _vm._v(" "),
-      _c("textarea", {
-        staticClass: "form-control",
-        attrs: {
-          name: "description",
-          id: "description",
-          cols: "30",
-          rows: "10"
-        }
-      })
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

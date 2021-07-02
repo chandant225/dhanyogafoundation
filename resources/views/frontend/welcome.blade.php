@@ -188,6 +188,9 @@
         </div>
     </section>
 
+
+    @include('frontend.welcome.videos')
+
     @if(appSettings('show_latest_blogs_section') == 'yes')
     <x-latest-blogs-section></x-latest-blogs-section>
     @endif
