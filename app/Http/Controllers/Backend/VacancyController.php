@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\NewVacancyRequest;
 use App\Question;
 use App\Vacancy;
+use App\Alert\Facades\Alert;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -57,6 +58,14 @@ class VacancyController extends Controller
         }
 
         return redirect()->route('backend.vacancy.index')->with('success', 'Vacancy posted successfully.');
+    }
+
+    
+    public function destroy(Vacancy $vacancy)
+    {
+        $vacancy->delete();
+        Alert::success()->message('Product added successfully')->send();
+        return redirect()->route('backend.vacancy.index');
     }
 
 }

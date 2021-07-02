@@ -1,9 +1,9 @@
 <div>
     <div class="btn-toolbar mb-4" role="toolbar" aria-label="Toolbar with button groups">
         <div class="btn-group mr-2" role="group" aria-label="First group">
-            <button class="btn {{ $readFilter == null ? 'btn-primary' : 'btn-secondary' }}" wire:click="$set('readFilter', null)">All</button>
-            <button class="btn {{ $readFilter == 1 ? 'btn-primary' : 'btn-secondary' }}" wire:click="$set('readFilter', 1)">Unread</button>
-            <button class="btn {{ $readFilter == 2 ? 'btn-primary' : 'btn-secondary' }}" wire:click="$set('readFilter', 2)">Read</button>
+            <button class="btn {{ $readFilter == null ? 'btn-primary' : 'btn-secondary' }}" wire:click="$set('readFilter', null)">All <small>({{ $allApplicationCount }})</small></button>
+            <button class="btn {{ $readFilter == 1 ? 'btn-primary' : 'btn-secondary' }}" wire:click="$set('readFilter', 1)">Unread <small>({{ $unreadApplicationCount }})</small></button>
+            <button class="btn {{ $readFilter == 2 ? 'btn-primary' : 'btn-secondary' }}" wire:click="$set('readFilter', 2)">Read <small>({{ $readApplicationCount }})</small></button>
         </div>
     </div>
 
@@ -16,7 +16,7 @@
             </div>
             <div class="ml-auto">
                 <a class="btn btn-primary btn-sm" href="{{ route('backend.volunteer-applications.show', $application) }}">View</a>
-                <button class="btn btn-danger btn-sm">Delete</button>
+                {{-- <button class="btn btn-danger btn-sm">Delete</button> --}}
             </div>
         </div>
     </div>

@@ -84,6 +84,7 @@ Route::name('backend.')->group(function () {
     Route::get('vacancy/new', 'VacancyController@create')->name('vacancy.create');
     Route::post('vacancy', 'VacancyController@store')->name('vacancy.store');
     Route::get('vacancy/{vacancy}/edit', 'VacancyController@edit')->name('vacancy.edit');
+    Route::delete('vacancy/{vacancy}', 'VacancyController@destroy')->name('vacancy.destroy');
 
     Route::view('volunteer-applications', 'volunteer-application.index')->name('volunteer-applications.index');
     Route::get('volunteer-applications/{volunteerApplication}', 'VolunteerApplicationController@show')->name('volunteer-applications.show');

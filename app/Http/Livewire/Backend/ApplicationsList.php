@@ -15,6 +15,16 @@ class ApplicationsList extends Component
     protected $queryString = ['readFilter'];
 
     public $readFilter = null;
+    public $allApplicationCount;
+    public $readApplicationCount;
+    public $unreadApplicationCount;
+
+    public function mount()
+    {
+        $this->readApplicationCount = VolunteerApplication::read()->count();
+        $this->unreadApplicationCount = VolunteerApplication::unread()->count();
+        $this->allApplicationCount = $this->readApplicationCount + $this->unreadApplicationCount;
+    }
 
     public function updatingReadFilter()
     {
