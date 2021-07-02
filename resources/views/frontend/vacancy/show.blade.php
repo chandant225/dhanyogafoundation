@@ -33,7 +33,7 @@
 
         <div id="application-form" class="max-w-screen-md bg-gray-50 p-4 border border-gray-200 rounded-sm mt-8">
             <h3 class="text-xl font-semibold tracking-wide">Apply for this job</h3>
-            <form action="{{ route('vacancy.store') }}" method="POST">
+            <form action="{{ route('vacancy.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="vacancy_id" value="{{ $vacancy->id }}">
                 <p class="my-5">
@@ -62,6 +62,10 @@
                     <div class="block text-black font-semibold mb-2">Cover Letter</div>
                     <div class="text-xs text-gray-600 mb-3 leading-4">Introduce yourself and explain why you’re a strong candidate for this job. Feel free to suggest any changes to the job details or ask to schedule a video call.</div>
                     <textarea name="cover_letter" class="texteditor block w-full border border-gray-200 py-2 px-4 rounded" rows="5"></textarea>
+                </p>
+                <p class="my-5">
+                    <div class="block text-black font-semibold mb-2">CV/Resume</div>
+                    <input type="file" name="resume">
                 </p>
                 <p class="mt-4">
                     <button type="submit" class="py-2 px-4 bg-secondary text-gray-50 hover:bg-primary rounded-sm transition duration-200">Send Application</button>

@@ -20,6 +20,7 @@ class CreateVolunteerApplicationsTable extends Migration
             $table->string('applicant_email')->nullable();
             $table->text('cover_letter')->nullable();
             $table->text('questions')->nullable();
+            $table->string('resume')->nullable();
             $table->dateTime('read_at')->nullable();
             $table->timestamps();
         });

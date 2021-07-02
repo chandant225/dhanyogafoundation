@@ -29,6 +29,7 @@ class VacancyController extends Controller
             'applicant_name' => $request->applicant_name,
             'applicant_email' => $request->applicant_email,
             'cover_letter' => $request->cover_letter,
+            'resume' => $request->hasFile('resume') ? $request->file('resume')->store('resumes') : null,
             'questions' => serialize($request->questions),
         ]);
 

@@ -28,6 +28,7 @@ class VolunteerApplicationRequest extends FormRequest
             'applicant_name' => 'required',
             'applicant_email' => 'required',
             'cover_letter' => 'nullable',
+            'resume' => 'nullable',
             'questions' => 'nullable'
         ];
     }

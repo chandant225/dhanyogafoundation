@@ -33,6 +33,17 @@
         <div class="answer-box">{!! $application->cover_letter !!}</div>
     </div>
 
+    <div class="form-group">
+        <label for="">CV/Resume</label>
+        @if ($application->resume)
+        <div class="answer-box">
+            <a href="{{ asset('storage' . '/'. $application->resume) }}" class="btn btn-primary" download target="_blank">Download</a>
+        </div>
+        @else
+        <div>No resume provided.</div>
+        @endif
+    </div>
+
     @foreach ($questions as $question)
     <div class="form-group">
         <label for="">{{ $question['question'] }}</label>
