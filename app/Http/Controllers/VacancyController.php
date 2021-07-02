@@ -24,12 +24,6 @@ class VacancyController extends Controller
 
     public function store(VolunteerApplicationRequest $request)
     {
-        // $serialized = serialize($request->questions);
-        // $questions =  unserialize($serialized);
-
-        // foreach($questions as $question){
-        //     return $question['question'];
-        // }
         VolunteerApplication::create([
             'vacancy_id' => $request->vacancy_id,
             'applicant_name' => $request->applicant_name,
