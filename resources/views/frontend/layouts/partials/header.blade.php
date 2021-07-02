@@ -36,6 +36,11 @@
             <a class="py-2 px-3 hover:text-primary" href="{{ route('contact-us.index') }}">{{ __('Contact') }}</a>
             {{-- <a class="py-2 px-3 hover:text-primary" href="{{ url('/') }}">{{ __('Shop') }}</a> --}}
             <a class="py-2 px-3 bg-primary hover:bg-opacity-80 text-white rounded-md font-semibold " href="{{ appSettings('donate_link') }}" target="_blank">{{ __('Donate') }}</a>
+            @auth
+            @hasrole('admin')
+            <a class="py-2 px-3 bg-secondary hover:bg-opacity-80 text-white rounded-md font-semibold ml-2" href="{{ route('backend.dashboard') }}">{{ __('Dashboard') }}</a>
+            @endhasrole
+            @endauth
         </nav>
     </div>
 </header>

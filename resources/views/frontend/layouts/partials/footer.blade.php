@@ -100,7 +100,7 @@
             <span>-</span>
             <a class="hover:underline" href="{{ getPageUrlBySlug(appSettings('terms_and_conditions_page_url')) }}" target="_blank">Terms of Use</a>
             <span>-</span>
-            <a class="hover:underline" href="#">Job Oppurtunities</a>
+            <a class="hover:underline" href="{{ route('vacancy.index') }}">Job Oppurtunities</a>
             <span>-</span>
             <a class="hover:underline" href="{{ route('login') }}">Sign In</a>
         </div>

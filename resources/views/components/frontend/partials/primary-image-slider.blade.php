@@ -15,7 +15,7 @@
                                 @if ($slide->action_link)
                                 <a class="py-2 px-5 border-2 border-primary bg-primary text-white uppercase hover:bg-white hover:text-primary sm:mr-3" href="{{ $slide->action_link }}" @if($slide->open_in_new_tab) target="_blank" @endif>{{ $slide->action_button_text ?? 'Donate' }}</a>
                                 @endif
-                                <a class="py-2 px-5 border-2 border-secondary bg-secondary text-white uppercase hover:bg-white hover:text-secondary" href="/programs/volunteer-program/">VOLUNTEER</a>
+                                <a class="py-2 px-5 border-2 border-secondary bg-secondary text-white uppercase hover:bg-white hover:text-secondary" href="{{ route('vacancy.index') }}">VOLUNTEER</a>
                             </div>
                         </section>
                     </div>
