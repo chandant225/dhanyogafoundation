@@ -30,6 +30,10 @@ Route::get('blogs/{post}', 'PostController@show')->name('posts.show');
 
 // Route::get('find-a-store', 'StoreController@index')->name('stores.index');
 
+Route::get('volunteer', 'VacancyController@index')->name('vacancy.index');
+Route::get('volunteer/{vacancy}', 'VacancyController@show')->name('vacancy.show');
+Route::post('volunteer/', 'VacancyController@store')->name('vacancy.store');
+
 Route::get('our-team', 'OurTeamController@index')->name('our-team.index');
 Route::get('our-team/{slug}', 'OurTeamController@show')->name('our-team.show');
 

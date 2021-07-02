@@ -3,9 +3,9 @@
         <img class="rounded-lg object-cover" src="{{ $post->imageUrl() }}" alt="{{ $post->title }}">
     </div>
     <div class="p-4">
-        <div class="bg-red-50 py-2 px-3 group inline-flex items-center space-x-2 rounded-full hover:bg-red-500">
-            <span class="inline-block bg-red-500 w-3 h-3 rounded-full group-hover:bg-white"></span>
-            <span class="text-red-500 font-semibold text-sm group-hover:text-white">{{ $post->category->name }}</span>
+        <div class="bg-indigo-50 py-2 px-3 group inline-flex items-center space-x-2 rounded-full hover:bg-primary">
+            <span class="inline-block bg-primary w-3 h-3 rounded-full group-hover:bg-white"></span>
+            <span class="text-primary font-semibold text-sm group-hover:text-white">{{ $post->category->name }}</span>
         </div>
         <h1 class="text-lg text-gray-700 hover:text-primary font-bold my-4 tracking-wide">
             <a href="{{ route('posts.show', $post) }}">{{ $post->title }}</a>

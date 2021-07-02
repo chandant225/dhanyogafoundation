@@ -80,6 +80,14 @@ Route::name('backend.')->group(function () {
     Route::get('downloads/create', 'DownloadController@create')->name('downloads.create');
     Route::get('downloads/{download}/edit', 'DownloadController@edit')->name('downloads.edit');
 
+    Route::get('vacancy', 'VacancyController@index')->name('vacancy.index');
+    Route::get('vacancy/new', 'VacancyController@create')->name('vacancy.create');
+    Route::post('vacancy', 'VacancyController@store')->name('vacancy.store');
+    Route::get('vacancy/{vacancy}/edit', 'VacancyController@edit')->name('vacancy.edit');
+
+    Route::view('volunteer-applications', 'volunteer-application.index')->name('volunteer-applications.index');
+    Route::get('volunteer-applications/{volunteerApplication}', 'VolunteerApplicationController@show')->name('volunteer-applications.show');
+
     Route::group(['namespace' => 'Setting'], function () {
         Route::get('settings/general', 'GeneralSettingController@index')->name('settings.general.index');
         Route::post('settings/general', 'GeneralSettingController@store')->name('settings.general.store');

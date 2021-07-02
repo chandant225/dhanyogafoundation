@@ -30,7 +30,7 @@
                     <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="{{ route('static-page.faq') }}">{{ __('FAQ') }}</a>
                 </div>
             </div>
-            <a class="py-2 px-3 hover:text-primary" href="{{ url('/') }}">{{ __('Volunteer') }}</a>
+            <a class="py-2 px-3 hover:text-primary" href="{{ route('vacancy.index') }}">{{ __('Volunteer') }}</a>
             <a class="py-2 px-3 hover:text-primary" href="{{ route('posts.index') }}">{{ __('Blogs') }}</a>
             <a class="py-2 px-3 hover:text-primary" href="{{ route('reports.index') }}">{{ __('Financials/Reports') }}</a>
             <a class="py-2 px-3 hover:text-primary" href="{{ route('contact-us.index') }}">{{ __('Contact') }}</a>

@@ -12,12 +12,12 @@
         <div class="grid grid-cols-12 gap-3 md:gap-4">
             {{-- First Column --}}
             <div class="col-span-12 sm:col-span-5">
-                <h1 class="text-xl text-indigo-900 font-bold tracking-wide uppercase mb-4">{{ siteName() }}</h1>
-                <div>
-                    <ul class=space-y-2 text-sm">
+                <h1 class="text-xl text-secondary font-bold tracking-wide uppercase mb-4">{{ siteName() }}</h1>
+                <div class="text-primary">
+                    <ul class="space-y-2 text-sm">
                         @if (appSettings('mobile'))
                         <li class="flex items-center space-x-2">
-                            <span class="text-gray-500">
+                            <span class="text-secondary">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14.414 7l3.293-3.293a1 1 0 00-1.414-1.414L13 5.586V4a1 1 0 10-2 0v4.003a.996.996 0 00.617.921A.997.997 0 0012 9h4a1 1 0 100-2h-1.586z"></path>
                                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
@@ -27,7 +27,7 @@
                         </li>
                         @endif
                         <li class="flex items-center space-x-2">
-                            <span class="text-gray-500">
+                            <span class="text-secondary">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
@@ -36,7 +36,7 @@
                             <span><a class="hover:underline" href="mailto:{{ appSettings('email') }}">{{ appSettings('email') }}</a></span>
                         </li>
                         <li class="flex items-center space-x-2">
-                            <span class="text-gray-500">
+                            <span class="text-secondary">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
                                 </svg>
@@ -85,10 +85,10 @@
             </div>
         </div>
 
-        <div class="mt-12 text-center text-xs">
+        <div class="mt-12 text-center text-xs text-primary">
             *Disclaimer: Dhana Yoga Foundation is a nonprofit 501(c)(3) charitable organization with EIN number 83-2193218. All contributions are tax deductible to the fullest extent allowed by law.
         </div>
-        <div class="container mx-auto py-3 px-4 text-center text-xs">
+        <div class="container mx-auto py-3 px-4 text-center text-xs text-primary">
             Copyright © {{ date('Y') }} {{ siteName() }}. All rights reserved.
             <a class="hover:underline" href="{{ route('contact-us.index') }}">Contact Us</a>
             <span>-</span>
@@ -193,6 +193,7 @@
                     </ul>
                     <div class="mt-4">
                         <h1 class="my-2">Subscribe to Newsletter</h1>
+                        
                         <form action="#" class="text-gray-700">
                             <div class="flex w-72 py-2 px-4 bg-gray-100 rounded-full overflow-hidden">
                                 <input type="email" class="bg-transparent py-2 px-5 border-none focus:outline-none" placeholder="Email">
