@@ -44,4 +44,7 @@ Route::get('contact-us', 'ContactUsController@index')->name('contact-us.index');
 Route::view('core-values', 'frontend.static-page.core-values')->name('static-page.core-values');
 Route::view('faq', 'frontend.static-page.faq')->name('static-page.faq');
 
+Route::get('get-involved', 'PageController@getInvolved')->name('get-involved');
+Route::get('get-involved/donation', 'PageController@donation')->name('get-involved.donation');
+Route::view('get-involved/donation/leave-a-will-for-dhana-yoga-foundation', 'frontend.page.leave-a-will')->name('get-involved.donation.leave-a-will');
 Route::get('{page}', 'PageController@show')->name('frontend.pages.show');

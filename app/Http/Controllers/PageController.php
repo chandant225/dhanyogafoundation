@@ -18,4 +18,14 @@ class PageController extends Controller
 
         return view('frontend.page.show', compact('page'));
     }
+
+    public function getInvolved()
+    {
+        return view('frontend.page.get-involved');
+    }
+
+    public function donation()
+    {
+        return view('frontend.page.donation');
+    }
 }

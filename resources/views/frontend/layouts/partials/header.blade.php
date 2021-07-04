@@ -30,7 +30,22 @@
                     <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="{{ route('static-page.faq') }}">{{ __('FAQ') }}</a>
                 </div>
             </div>
-            <a class="py-2 px-3 hover:text-primary" href="{{ route('vacancy.index') }}">{{ __('Volunteer') }}</a>
+            <div class="relative" x-data="{ open: false }" @mouseover.away="open = false">
+                <button class="py-2 px-3 hover:text-primary font-medium tracking-wide focus:outline-none" x-on:mouseover="open = true">
+                    <span>Get Involved</span>
+                    <span>
+                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </span>
+                </button>
+                <div class="absolute w-48 bg-white shadow-lg rounded-md py-2 z-50 transition-all duration-1000" x-show="open" x-cloak>
+                    <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="/get-involved">{{ __('Get Involved') }}</a>
+                    <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="{{ route('get-involved.donation') }}">{{ __('Donation') }}</a>
+                    <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="/fundraising">{{ __('Fundraising') }}</a>
+                    <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="{{ route('vacancy.index') }}">{{ __('Volunteer') }}</a>
+                </div>
+            </div>
             <a class="py-2 px-3 hover:text-primary" href="{{ route('posts.index', 'blog') }}">{{ __('Blogs') }}</a>
             <a class="py-2 px-3 hover:text-primary" href="{{ route('reports.index') }}">{{ __('Financials/Reports') }}</a>
             <a class="py-2 px-3 hover:text-primary" href="{{ route('contact-us.index') }}">{{ __('Contact') }}</a>
