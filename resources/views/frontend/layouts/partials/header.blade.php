@@ -12,7 +12,7 @@
         </button>
         @include('frontend.layouts.partials.mobile-menu')
         <nav id="desktop-menu" x-show="!show" class="hidden sm:flex items-center space-x- text-indigo-900 font-medium tracking-wide">
-            <a class="py-2 px-3 hover:text-primary" href="{{ url('/') }}">{{ __('Programs') }}</a>
+            <a class="py-2 px-3 hover:text-primary" href="{{ route('posts.index', 'program') }}">{{ __('Programs') }}</a>
             <div class="relative" x-data="{ open: false }" @mouseover.away="open = false">
                 <button class="py-2 px-3 hover:text-primary font-medium tracking-wide focus:outline-none" x-on:mouseover="open = true">
                     <span>About</span>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <a class="py-2 px-3 hover:text-primary" href="{{ route('vacancy.index') }}">{{ __('Volunteer') }}</a>
-            <a class="py-2 px-3 hover:text-primary" href="{{ route('posts.index') }}">{{ __('Blogs') }}</a>
+            <a class="py-2 px-3 hover:text-primary" href="{{ route('posts.index', 'blog') }}">{{ __('Blogs') }}</a>
             <a class="py-2 px-3 hover:text-primary" href="{{ route('reports.index') }}">{{ __('Financials/Reports') }}</a>
             <a class="py-2 px-3 hover:text-primary" href="{{ route('contact-us.index') }}">{{ __('Contact') }}</a>
             {{-- <a class="py-2 px-3 hover:text-primary" href="{{ url('/') }}">{{ __('Shop') }}</a> --}}

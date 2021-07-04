@@ -4,6 +4,7 @@
             <tr class="bg-light">
                 <td>Name</td>
                 <td>Slug</td>
+                <td>Posts</td>
                 <td class="text-right"></td>
             </tr>
         </thead>
@@ -12,6 +13,7 @@
             <tr>
                 <td>{{ $postCategory->name }}</td>
                 <td>{{ $postCategory->slug }}</td>
+                <td>{{ $postCategory->posts_count }}</td>
                 <td class="text-right">
                     @if($postCategory->slug != 'uncategorized')
                     <button type="button" wire:click="$emit('editPostCategory', '{{ $postCategory->slug }}')" class="btn btn-success btn-sm">Edit</button>

@@ -3,16 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\PostCategory;
 use Artesaos\SEOTools\Traits\SEOTools as SEOToolsTrait;
 
 
 class PostController extends Controller
 {
     use SEOToolsTrait;
-    
-    public function index()
+
+    public function index(PostCategory $postCategory = null)
     {
-        $posts = Post::with(['category'])->published()->latest()->paginate();
+        if ($postCategory == null) {
+            $postCategory = PostCategory::where('slug', 'blog')->first();
+        }
+
+        $posts = Post::with(['category'])
+            ->where('post_category_id', $postCategory->id)
+            ->published()
+            ->latest()
+            ->paginate();
 
         return view('frontend.post.index', [
             'posts' => $posts

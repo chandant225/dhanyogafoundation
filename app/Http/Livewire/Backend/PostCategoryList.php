@@ -35,7 +35,7 @@ class PostCategoryList extends Component
     public function render()
     {
         return view('livewire.backend.post-category-list', [
-            'postCategories' => PostCategory::latest()->get()
+            'postCategories' => PostCategory::withCount('posts')->latest()->get()
         ]);
     }
 }

@@ -45,12 +45,12 @@ Route::name('backend.')->group(function () {
     Route::delete('image-sliders/{imageSlider}', 'ImageSliderController@delete')->name('image-sliders.destroy');
 
     // Programs
-    Route::get('programs' , 'ProgramController@index')->name('programs.index');
-    Route::get('programs/create' , 'ProgramController@create')->name('programs.create');
-    Route::post('programs' , 'ProgramController@store')->name('programs.store');
-    Route::get('programs/{program}/edit' , 'ProgramController@edit')->name('programs.edit');
-    Route::put('programs/{program}' , 'ProgramController@update')->name('programs.update');
-    Route::delete('programs/{program}' , 'ProgramController@destroy')->name('programs.destroy');
+    // Route::get('programs' , 'ProgramController@index')->name('programs.index');
+    // Route::get('programs/create' , 'ProgramController@create')->name('programs.create');
+    // Route::post('programs' , 'ProgramController@store')->name('programs.store');
+    // Route::get('programs/{program}/edit' , 'ProgramController@edit')->name('programs.edit');
+    // Route::put('programs/{program}' , 'ProgramController@update')->name('programs.update');
+    // Route::delete('programs/{program}' , 'ProgramController@destroy')->name('programs.destroy');
 
     Route::get('contact-us', 'ContactUsController@index')->name('contact-us.index');
     Route::get('subscribers', 'SubscriberController@index')->name('subscribers.index');

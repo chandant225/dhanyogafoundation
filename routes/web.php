@@ -22,7 +22,7 @@ Auth::routes(['register' => false]);
 
 Route::get('backend/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')->name('backend.logs');
 
-Route::get('blogs', 'PostController@index')->name('posts.index');
+Route::get('posts/{postCategory?}', 'PostController@index')->name('posts.index');
 Route::get('blogs/{post}', 'PostController@show')->name('posts.show');
 
 // Route::get('products', 'ProductController@index')->name('products.index');

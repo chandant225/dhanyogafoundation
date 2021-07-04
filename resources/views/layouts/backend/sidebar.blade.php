@@ -86,7 +86,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item @if(request()->routeIs('backend.programs.*')) menu-open @endif"">
+                {{-- <li class="nav-item @if(request()->routeIs('backend.programs.*')) menu-open @endif"">
                     <a href=" #" class="nav-link @if(request()->routeIs('backend.programs*')) active @endif">
                     <span class="nav-icon svg-icon svg-baseline">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-pin-angle" viewBox="0 0 16 16">
@@ -112,7 +112,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a href="{{ route('backend.volunteer-applications.index') }}" class="nav-link {{ setActive('backend.volunteer-applications.index') }}">
                         <span class="nav-icon svg-icon svg-baseline">
