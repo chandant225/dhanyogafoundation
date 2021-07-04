@@ -11,6 +11,9 @@
             @foreach ($programKeys as $key)
             <div class="bg-white py-10 px-6 md:px-8 shadow-sm hover:shadow-xl" data-aos="fade-up" data-aos-duration="1000">
                 <h1 class="text-2xl sm:text-2xl text-primary tracking-wide font-semibold">{{ appSettings($key . 'title') }}</h1>
+                @hasanyrole('admin')
+                <a class="mt-1 inline-block bg-indigo-500 py-1 px-3 text-xs text-gray-50 rounded hover:bg-opacity-90" href="{{ route('backend.settings.homepage.index') }}#our-programs">Edit</a>
+                @endhasanyrole
                 <div class="text-gray-600 tracking-wide my-8 leading-7 text-justify line-clamp-8">
                     {!! appSettings($key . 'desc') !!}
                 </div>
