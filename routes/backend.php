@@ -66,6 +66,10 @@ Route::name('backend.')->group(function () {
 
     Route::get('departments', 'DepartmentController')->name('departments.index');
     Route::get('our-team', 'OurTeamController@index')->name('our-team.index');
+    Route::get('our-team/create', 'OurTeamController@create')->name('our-team.create');
+    Route::post('our-team', 'OurTeamController@store')->name('our-team.store');
+    Route::get('our-team/{ourTeam}/edit', 'OurTeamController@edit')->name('our-team.edit');
+    Route::put('our-team/{ourTeam}', 'OurTeamController@update')->name('our-team.update');
 
     Route::get('faqs', 'FaqController@index')->name('faqs.index');
     Route::get('faqs/create', 'FaqController@create')->name('faqs.create');

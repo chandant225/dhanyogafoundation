@@ -27,7 +27,8 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button wire:click="$emit('editOurTeam', '{{ $ourTeam->id }}')" class="btn btn-sm btn-success px-3">Edit</button>
+                    {{-- <button wire:click="$emit('editOurTeam', '{{ $ourTeam->id }}')" class="btn btn-sm btn-success px-3">Edit</button> --}}
+                    <a href="{{ route('backend.our-team.edit', $ourTeam) }}" class="btn btn-sm btn-success px-3">Edit</a>
                     <button wire:click="$emit('deleteOurTeam', '{{ $ourTeam->id }}')" onclick="confirm('Are you sure to delete?') || event.stopImmediatePropagation()" class="btn btn-sm btn-danger px-3">Del</button>
                 </div>
             </div>
