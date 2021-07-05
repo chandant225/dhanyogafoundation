@@ -17,7 +17,7 @@ class CreateOurTeamsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
-            $table->foreignId('department_id')->constrained('users');
+            $table->foreignId('department_id')->constrained('users'); // it shoule be constrained to departments, removed in another migration
             $table->string('designation')->nullable();
             $table->string('photo')->nullable();
             $table->string('email')->nullable();
