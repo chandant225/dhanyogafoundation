@@ -6,7 +6,9 @@ use App\Category;
 use App\Observers\CategoryObserver;
 use App\Observers\ProductImageObserver;
 use App\ProductImage;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -28,6 +30,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (App::environment('production')) {
+            URL::forceScheme('https');
+        }
+
         ProductImage::observe(ProductImageObserver::class);
         Category::observe(CategoryObserver::class);
 
