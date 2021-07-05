@@ -13,9 +13,9 @@
     </x-frontend.partials.page-title>
 
     <div class="container mx-auto py-16 px-8">
-        <div class="flex gap-5 md:gap-6 lg:gap-8">
+        <div class="md:flex gap-5 md:gap-6 lg:gap-8">
             <div>
-                <div class="h-48 w-48">
+                <div class="h-48 w-48 mx-auto">
                     <img class="h-full w-full object-cover rounded-lg shadow-lg" src="{{ $member->photoUrl() }}" alt="{{ $member->name }}">
                 </div>
                 <div class="text-center">
