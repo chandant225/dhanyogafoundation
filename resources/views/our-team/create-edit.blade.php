@@ -36,10 +36,30 @@
             <input type="text" name="designation" class="form-control @error('designation') is-invalid @enderror" value="{{ old('designation', $ourTeam->designation) }}">
             <x-invalid-feedback field="designation"></x-invalid-feedback>
         </div>
-        <div class="form-group">
-            <label class="text-sm">E-mail</label>
-            <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email', $ourTeam->email) }}">
-            <x-invalid-feedback field="email"></x-invalid-feedback>
+        <div class="form-group row">
+            <div class="col-md-6">
+                <label class="text-sm">E-mail</label>
+                <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email', $ourTeam->email) }}">
+                <x-invalid-feedback field="email"></x-invalid-feedback>
+            </div>
+
+            <div class="col-md-6">
+                <label class="text-sm">Facebook Link</label>
+                <input type="text" name="facebook_link" class="form-control @error('facebook_link') is-invalid @enderror" value="{{ old('facebook_link', $ourTeam->facebook_link) }}">
+                <x-invalid-feedback field="facebook_link"></x-invalid-feedback>
+            </div>
+
+            <div class="col-md-6">
+                <label class="text-sm">Twitter Link</label>
+                <input type="text" name="twitter_link" class="form-control @error('twitter_link') is-invalid @enderror" value="{{ old('twitter_link', $ourTeam->twitter_link) }}">
+                <x-invalid-feedback field="twitter_link"></x-invalid-feedback>
+            </div>
+
+            <div class="col-md-6">
+                <label class="text-sm">LinkedIn Link</label>
+                <input type="text" name="linkedin_link" class="form-control @error('linkedin_link') is-invalid @enderror" value="{{ old('linkedin_link', $ourTeam->linkedin_link) }}">
+                <x-invalid-feedback field="linkedin_link"></x-invalid-feedback>
+            </div>
         </div>
         <div class="form-group">
             <label class="text-sm">Department</label>

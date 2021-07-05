@@ -48,9 +48,14 @@ Breadcrumbs::for('product', function ($trail, $product) {
 });
 
 // Our Team
-Breadcrumbs::for('our-teams', function($trail) {
+Breadcrumbs::for('our-teams', function ($trail) {
     $trail->parent('home');
-    $trail->push('Our Teams');
+    $trail->push('Our Teams', route('our-team.index'));
+});
+
+Breadcrumbs::for('team-member', function ($trail, $title) {
+    $trail->parent('our-teams');
+    $trail->push($title);
 });
 
 Breadcrumbs::for('stores', function ($trail) {

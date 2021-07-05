@@ -24,5 +24,13 @@ class OurTeamController extends Controller
 
     public function show($slug)
     {
+        $pageTitle = 'Our Team';
+
+        $member = OurTeam::where('slug', $slug)->firstOrFail();
+
+        return view('frontend.our-team.show', [
+            'pageTitle' => $pageTitle,
+            'member' => $member
+        ]);
     }
 }
