@@ -46,7 +46,7 @@
             <select name="department_id" class="custom-select @error('department_id') is-invalid @enderror">
                 <option value="">Select Department</option>
                 @foreach ($departments as $department)
-                <option value="{{ $department->id }}" @if(old('department_id', $ourTeam->department_id)) selected @endif>{{ $department->name }}</option>
+                <option value="{{ $department->id }}" @if(old('department_id', $ourTeam->department_id) == $department->id) selected @endif>{{ $department->name }}</option>
                 @endforeach
             </select>
             <x-invalid-feedback field="department_id"></x-invalid-feedback>
