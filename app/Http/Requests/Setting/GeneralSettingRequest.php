@@ -42,6 +42,8 @@ class GeneralSettingRequest extends FormRequest
             'youtube_url' => 'nullable',
             'linkedin_url' => 'nullable',
             
+            'header_scripts' => 'nullable',
+            'footer_scripts' => 'nullable',
         ];
     }
 }

@@ -109,6 +109,27 @@
                 </div>
             </div>
         </div>
+
+        <h4 class="h4-responsive">{{ __('Additional Scripts Adder') }}</h4>
+        <section class="card z-depth-0">
+            <div class="card-body">
+                <div class="form-group">
+                    <x-form.label>Header Script</x-form.label>
+                    <textarea name="header_scripts" id="" class="form-control" cols="30" rows="10">{{ old('header_scripts', appSettings('header_scripts')) }}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <x-form.label>Footer Script</x-form.label>
+                    <textarea name="footer_scripts" id="" class="form-control" cols="30" rows="10">{{ old('footer_scripts', appSettings('footer_scripts')) }}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary px-4 ml-0">Save</button>
+                </div>
+
+            </div>
+        </section>
+
     </form>
 
 </div>

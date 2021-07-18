@@ -29,6 +29,8 @@
     @livewireStyles
     @stack('styles')
     {{ $styles ?? '' }}
+    {{-- Additional header scripts from settings --}}
+    {!! appSettings('header_scripts') !!}
     <style>
         [x-cloak] {
             display: none !important;
@@ -64,6 +66,8 @@
 
     </script>
 
+    {{-- Additional footer scripts from settings --}}
+    {!! appSettings('footer_scripts') !!}
 </body>
 
 </html>
