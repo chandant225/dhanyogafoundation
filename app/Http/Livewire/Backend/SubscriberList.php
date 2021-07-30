@@ -2,9 +2,11 @@
 
 namespace App\Http\Livewire\Backend;
 
+use App\Exports\SubscribersExport;
 use App\Subscriber;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Maatwebsite\Excel\Facades\Excel;
 
 class SubscriberList extends Component
 {
@@ -28,5 +30,10 @@ class SubscriberList extends Component
         return view('livewire.backend.subscriber-list', [
             'subscribers' => $subscribers
         ]);
+    }
+
+    public function export()
+    {
+        return Excel::download(new SubscribersExport, 'subscribers.xlsx');
     }
 }

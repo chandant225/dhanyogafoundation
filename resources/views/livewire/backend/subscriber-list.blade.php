@@ -1,11 +1,14 @@
 <x-box class="border-0 rounded shadow-sm">
-    <div class="mb-3">
+    <div class="d-flex mb-3">
         <select wire:model="paginate" class="custom-select w-auto">
             <option value="15">15</option>
             <option value="25">25</option>
             <option value="50">50</option>
             <option value="100">100</option>
         </select> records per page
+        <div class="ml-auto">
+            <button wire:click="export" class="btn btn-primary">Export</button>
+        </div>
     </div>
     <table class="table table-borderless">
         <thead class="bg-primary">
