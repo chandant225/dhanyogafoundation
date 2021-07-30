@@ -4,10 +4,15 @@ namespace App\Http\Livewire\Backend;
 
 use App\Subscriber;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class SubscriberList extends Component
 {
+    use WithPagination;
+
     public $paginate = 15;
+    protected $paginationTheme = 'bootstrap';
+    protected $queryString = ['paginate'];
 
     public function trash(Subscriber $subscriber)
     {
