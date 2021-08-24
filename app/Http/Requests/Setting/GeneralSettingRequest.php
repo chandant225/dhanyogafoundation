@@ -39,6 +39,7 @@ class GeneralSettingRequest extends FormRequest
 
             'facebook_url' => 'nullable',
             'twitter_url' => 'nullable',
+            'instagram_url' => 'nullable',
             'youtube_url' => 'nullable',
             'linkedin_url' => 'nullable',
             

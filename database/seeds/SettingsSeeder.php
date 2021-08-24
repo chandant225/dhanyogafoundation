@@ -27,6 +27,7 @@ class SettingsSeeder extends Seeder
 
             'facebook_url' => 'https://facebook.com',
             'twitter_url' => 'https://twitter.com',
+            'instagram_url' => 'https://instagram.com',
             'youtube_url' => 'https://youtube.com',
             'linkedin_url' => 'https://linkedin.com',
         ]);

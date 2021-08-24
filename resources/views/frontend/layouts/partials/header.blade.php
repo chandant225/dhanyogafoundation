@@ -12,6 +12,7 @@
         </button>
         @include('frontend.layouts.partials.mobile-menu')
         <nav id="desktop-menu" x-show="!show" class="hidden sm:flex items-center space-x- text-indigo-900 font-medium tracking-wide">
+            <a class="py-2 px-3 hover:text-primary" href="{{ url('/') }}">{{ __('Home') }}</a>
             <a class="py-2 px-3 hover:text-primary" href="{{ route('posts.index', 'program') }}">{{ __('Programs') }}</a>
             <div class="relative" x-data="{ open: false }" @mouseover.away="open = false">
                 <button class="py-2 px-3 hover:text-primary font-medium tracking-wide focus:outline-none" x-on:mouseover="open = true">

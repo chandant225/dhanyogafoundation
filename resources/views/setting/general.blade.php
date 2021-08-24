@@ -96,6 +96,10 @@
                     <x-fields.input name="twitter_url" :value="old('twitter_url', appSettings('twitter_url'))" />
                 </div>
                 <div class="form-group">
+                    <x-form.label>Instagram Url</x-form.label>
+                    <x-fields.input name="instagram_url" :value="old('instagram_url', appSettings('instagram_url'))" />
+                </div>
+                <div class="form-group">
                     <x-form.label>Youtube Url</x-form.label>
                     <x-fields.input name="youtube_url" :value="old('youtube_url', appSettings('youtube_url'))" />
                 </div>
