@@ -1,3 +1,4 @@
+{{-- Section no longer in use --}}
 <section class="bg-primary text-white">
     <div class="container mx-auto text-center py-16 px-4">
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide">Our Progress</h1>

@@ -1,4 +1,4 @@
-<section class="bg-gray-100 ">
+<section class="bggray-100 ">
     <div class="container mx-auto py-16 px-4">
         <div class="group">
             <h1 class="text-3xl sm:text-4xl md:text-5xl text-center text-primary font-semibold tracking-wide">{{ __('DYF SCHOLARSHIP PROGRAM') }}</h1>

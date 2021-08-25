@@ -1,41 +1,27 @@
 <x-app-layout>
     <x-frontend.partials.primary-image-slider />
 
-    {{-- <div class="relative" style="background-image: url({{ asset('assets/images/temp/banner.jpg') }}); background-size: cover; min-height: 690px;">
-    <div class="backdrop-filter backdrop-brightness-90 absolute w-full h-full p-5 flex items-center justify-center">
-        <div class="text-center">
-            <section class="text-white">
-                <h1 class="text-4xl md:text-5xl my-4 font-semibold tracking-wide">The Secret to Living is Giving.</h1>
-                <p class="tracking-wide">
-                    “Only those who have learned the power of sincere &amp; selfless contribution<br>
-                    experience life’s deepest joy: true fulfillment.”
-                </p>
-                <p>TONY ROBBINS</p>
-                <div class="mt-5" data-aos="fade-up">
-                    <a class="py-2 px-5 border-2 border-blue-600 bg-blue-600 text-white hover:bg-white hover:text-blue-600 sm:mr-3" href="/donate/">DONATE</a>
-                    <a class="py-2 px-5 border-2 border-red-600 bg-red-600 text-white hover:bg-white hover:text-secondary" href="/programs/volunteer-program/">VOLUNTEER</a>
-                </div>
-            </section>
+    <div class="container mx-auto py-16 px-4">
+        <div class="mb-4">
+            <h1 class="italic text-3xl md:text-4xl text-center text-primary font-semibold tracking-wide">{{ __('DYF lifting up the rural community') }}</h1>
         </div>
-    </div> --}}
 
-    {{-- <div class=" absolute bottom-0 w-full">
-            <svg class="w-full h-32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
-                </defs>
-                <g class="separator-waves-parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"></use>
-                </g>
-            </svg>
-        </div> --}}
+        <div class="aspect-w-16 aspect-h-9 mb-5">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8_gTdVVqOgA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="sm:grid grid-cols-2 gap-4 space-y-5 sm:space-y-0">
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zzn8pf9Vz2o?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YQedkYO6knQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 
-
-    <section class="container mx-auto py-16 px-4" data-aos="zoom-out-up">
+    {{-- Section removed --}}
+    {{-- <section class="container mx-auto py-16 px-4" data-aos="zoom-out-up">
         <h1 class="text-3xl sm:text-3xl md:text-4xl text-center font-bold text-indigo-900 tracking-wide md:px-16">Help make a better world free from all forms of
             exploitation, discrimination, and violence</h1>
         <div class="sm:flex sm:space-x-4 space-x-2-4 my-8 space-y-5 sm:space-y-0">
@@ -103,90 +89,93 @@
                 <div class="h-full relative">
                     <div class="absolute top-0 right-0">
                         <img src="{{ __('https://www.swaytheme.com/static/wp-content/uploads/sites/3/2020/10/ngo1.jpg') }}" alt="{{ __('') }}">
-                    </div>
-                    <div class="absolute top-32 right-32">
-                        <img src="{{ __('https://www.swaytheme.com/static/wp-content/uploads/sites/3/2020/10/ngo2.jpg') }}" alt="{{ __('') }}">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+    <div class="absolute top-32 right-32">
+        <img src="{{ __('https://www.swaytheme.com/static/wp-content/uploads/sites/3/2020/10/ngo2.jpg') }}" alt="{{ __('') }}">
+    </div>
+    </div>
+    </div>
+    </div>
+    </section> --}}
 
     @includeIf('frontend.welcome.our-mission', [appSettings('show_our_mission_section') => 'yes'])
 
-    @include('frontend.welcome.our-progress')
+    {{-- @include('frontend.welcome.our-progress') --}}
+
+    @include('frontend.welcome.core-values-section')
 
     @include('frontend.welcome.our-programs')
 
-    <section class="max-w-screen-xl mx-auto py-16 px-4">
+    {{-- Section removed --}}
+    {{-- <section class="max-w-screen-xl mx-auto py-16 px-4">
         <div class="relative aspect-w-16 aspect-h-8">
             <img class="w-full h-full object-cover rounded-3xl" src="https://www.swaytheme.com/static/wp-content/uploads/sites/3/2020/10/ngo-bg2.jpg?id=" alt="{{ __('') }}">
-            <div class="absolute h-full w-full pt-16 pb-32 top-0">
-                <div class="text-white max-w-screen-md mx-auto text-center">
-                    <h1 class="text-4xl md:text-5xl my-4 font-semibold tracking-wide">We must act, continue to act, and act together</h1>
-                    <p class="tracking-wide">
-                        We have a vision of a just world, a world where people are valued and treated equally,
-                        a world without poverty. You can make a difference!
-                    </p>
-                    <div class="mt-6">
-                        <a class="inline-block py-3 px-5 border-2 border-secondary bg-secondary text-white font-semibold rounded-full hover:bg-white hover:text-secondary" href="#">Become a Volunteer</a>
+    <div class="absolute h-full w-full pt-16 pb-32 top-0">
+        <div class="text-white max-w-screen-md mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl my-4 font-semibold tracking-wide">We must act, continue to act, and act together</h1>
+            <p class="tracking-wide">
+                We have a vision of a just world, a world where people are valued and treated equally,
+                a world without poverty. You can make a difference!
+            </p>
+            <div class="mt-6">
+                <a class="inline-block py-3 px-5 border-2 border-secondary bg-secondary text-white font-semibold rounded-full hover:bg-white hover:text-secondary" href="#">Become a Volunteer</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="-mt-32 px-10">
+        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 space-y-5 sm:space-y-0">
+            <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" aos-anchor-placement="bottom-bottom">
+                <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
+                    <div class="text-secondary">
+                        <img class="inline-flex w-10 h-10" src="{{ asset('assets/images/mini/ngo-icon1.webp') }}" alt="">
+                    </div>
+                    <div class="">
+                        <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Environment</h4>
+                        <p class="text-gray-500 my-4">We save and protect an lives in times of crisis.</p>
+                        <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" aos-anchor-placement="bottom-bottom">
+                <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
+                    <div class="text-secondary">
+                        <img class="inline-flex w-10 h-10" src="{{ asset('assets/images/mini/ngo-icon2.webp') }}" alt="">
+                    </div>
+                    <div class="">
+                        <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Nutrition</h4>
+                        <p class="text-gray-500 my-4">We save and protect an lives in times of crisis.</p>
+                        <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" aos-anchor-placement="bottom-bottom">
+                <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
+                    <div class="text-secondary">
+                        <img class="inline-flex w-10 h-10" src="{{ asset('assets/images/mini/ngo-icon3.webp') }}" alt="">
+                    </div>
+                    <div class="">
+                        <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Health</h4>
+                        <p class="text-gray-500 my-4">We save and protect an lives in times of crisis.</p>
+                        <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" aos-anchor-placement="bottom-bottom">
+                <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
+                    <div class="text-secondary">
+                        <img class="inline-flex w-10 h-10" src="{{ asset('assets/images/mini/ngo-icon4.webp') }}" alt="">
+                    </div>
+                    <div class="">
+                        <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Development</h4>
+                        <p class="text-gray-500 my-4">We save and protect an lives in times of crisis.</p>
+                        <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="-mt-32 px-10">
-            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 space-y-5 sm:space-y-0">
-                <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" aos-anchor-placement="bottom-bottom">
-                    <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
-                        <div class="text-secondary">
-                            <img class="inline-flex w-10 h-10" src="{{ asset('assets/images/mini/ngo-icon1.webp') }}" alt="">
-                        </div>
-                        <div class="">
-                            <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Environment</h4>
-                            <p class="text-gray-500 my-4">We save and protect an lives in times of crisis.</p>
-                            <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" aos-anchor-placement="bottom-bottom">
-                    <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
-                        <div class="text-secondary">
-                            <img class="inline-flex w-10 h-10" src="{{ asset('assets/images/mini/ngo-icon2.webp') }}" alt="">
-                        </div>
-                        <div class="">
-                            <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Nutrition</h4>
-                            <p class="text-gray-500 my-4">We save and protect an lives in times of crisis.</p>
-                            <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" aos-anchor-placement="bottom-bottom">
-                    <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
-                        <div class="text-secondary">
-                            <img class="inline-flex w-10 h-10" src="{{ asset('assets/images/mini/ngo-icon3.webp') }}" alt="">
-                        </div>
-                        <div class="">
-                            <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Health</h4>
-                            <p class="text-gray-500 my-4">We save and protect an lives in times of crisis.</p>
-                            <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white border-x border-t border-gray-100 shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" aos-anchor-placement="bottom-bottom">
-                    <div class="p-10 text-center border-b-4 border-white hover:border-b-4 hover:border-primary">
-                        <div class="text-secondary">
-                            <img class="inline-flex w-10 h-10" src="{{ asset('assets/images/mini/ngo-icon4.webp') }}" alt="">
-                        </div>
-                        <div class="">
-                            <h4 class="my-5 text-xl font-semibold text-blue-900 tracking-wide">Development</h4>
-                            <p class="text-gray-500 my-4">We save and protect an lives in times of crisis.</p>
-                            <a class="text-secondary hover:text-primary font-medium tracking-wide" href="#" target="_self">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+    </section> --}}
 
 
     @include('frontend.welcome.videos')
@@ -195,7 +184,8 @@
     <x-latest-blogs-section></x-latest-blogs-section>
     @endif
 
-    <section class="bg-no-repeat bg-cover bg-center sm:bg-left pb-36" style="background-image: url(/assets/images/transport-bg3.webp);">
+    {{-- Section Removed --}}
+    {{-- <section class="bg-no-repeat bg-cover bg-center sm:bg-left pb-36" style="background-image: url(/assets/images/transport-bg3.webp);">
         <div class="container mx-auto py-16 px-4">
             <div>
                 <h2 class="text-lg sm:text-3xl md:text-3xl text-indigo-900 font-bold text-center tracking-wide leading-relaxed mb-16">We work in over 190 countries and territories<br> to save people’s lives and their rights</h2>
@@ -261,7 +251,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <x-testimonial-section></x-testimonial-section>
 </x-app-layout>

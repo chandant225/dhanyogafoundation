@@ -1,4 +1,5 @@
  {{-- Testimonials --}}
+ @if(count($testimonials))
  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital@1&display=swap" rel="stylesheet">
  <style>
      .font-zilla-slab {
@@ -66,3 +67,4 @@
          </div>
      </div>
  </section>
+ @endif
