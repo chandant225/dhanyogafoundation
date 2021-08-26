@@ -47,7 +47,7 @@
                 </div>
             </div>
             {{-- Second Column --}}
-            <div class="col-span-6 sm:col-span-4">
+            <div class="col-span-6 sm:col-span-4 hidden sm:block">
                 <div>
                     <a class="inline-block h-12 w-auto" href="https://www.guidestar.org/profile/83-2193218" target="_blank">
                         <img src="https://widgets.guidestar.org/gximage2?o=9818920&l=v4" alt="Guidestar">

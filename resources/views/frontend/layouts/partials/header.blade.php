@@ -1,17 +1,17 @@
 @includeIf('frontend.layouts.partials.topbar-notice', [appSettings('show_topbar_notice') => 'yes'])
 <header>
     <div id="navbar-overlay" class="fixed bg-blue-50 opacity-0 rounded transition-all duration-300"></div>
-    <div class="container mx-auto flex justify-between items-center space-x-2 py-3 px-2 lg:px-6" x-data="{ show: false }">
+    <div class="container mx-auto flex justify-between items-center py-3 px-2 lg:px-6" x-data="{ show: false }">
         <a class="navbar-brand logo" href="{{ url('/') }}">
-        <img class="h-16" src="{{ siteLogoUrl() }}" alt="{{ siteName() }}">
+            <img class="h-12 sm:h-16" src="{{ siteLogoUrl() }}" alt="{{ siteName() }}">
         </a>
-        <button class="sm:hidden text-gray-700" type="button" @click="show = !show" x-cloak>
+        <button class="md:hidden text-gray-700" type="button" @click="show = !show" x-cloak>
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
         @include('frontend.layouts.partials.mobile-menu')
-        <nav id="desktop-menu" x-show="!show" class="hidden sm:flex items-center space-x- text-indigo-900 font-medium tracking-wide">
+        <nav id="desktop-menu" x-show="!show" class="hidden md:flex items-center spacex-x-1 lgspace-x-2 text-indigo-900 font-medium tracking-wide">
             <a class="py-2 px-3 hover:text-primary" href="{{ url('/') }}">{{ __('Home') }}</a>
             <a class="py-2 px-3 hover:text-primary" href="{{ route('posts.index', 'program') }}">{{ __('Programs') }}</a>
             <div class="relative" x-data="{ open: false }" @mouseover.away="open = false">
@@ -24,6 +24,7 @@
                     </span>
                 </button>
                 <div class="absolute w-48 bg-white shadow-lg rounded-md py-2 z-50 transition-all duration-1000" x-show="open" x-cloak>
+                    <div class="bg-primary h-1"></div>
                     <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="{{ getPageUrlBySlug(appSettings('about_us_page_url')) }}">{{ __('About Us') }}</a>
                     <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="{{ getPageUrlBySlug(appSettings('vision_and_mission_page_url')) }}">{{ __('Vision and mission') }}</a>
                     <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="{{ route('static-page.core-values') }}">{{ __('Core Values') }}</a>
@@ -41,6 +42,7 @@
                     </span>
                 </button>
                 <div class="absolute w-48 bg-white shadow-lg rounded-md py-2 z-50 transition-all duration-1000" x-show="open" x-cloak>
+                    <div class="bg-primary h-1"></div>
                     <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="/get-involved">{{ __('Get Involved') }}</a>
                     <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="{{ route('get-involved.donation') }}">{{ __('Donation') }}</a>
                     <a class="block py-2 px-3 hover:text-primary hover:bg-blue-50" href="/fundraising">{{ __('Fundraising') }}</a>
@@ -71,24 +73,4 @@
     }
 
 </style>
-<script>
-    const navbarOverlay = document.getElementById('navbar-overlay');
-    const navList = document.querySelectorAll('#desktop-menu > *');
-
-    navList.forEach(navItem => {
-        navItem.addEventListener('mouseover', () => {
-            navbarOverlay.classList.add('active');
-            let position = navItem.getBoundingClientRect();
-            navbarOverlay.style.left = position.left + 'px';
-            navbarOverlay.style.top = position.top + 'px';
-            navbarOverlay.style.width = position.width + 'px';
-            navbarOverlay.style.height = position.height + 'px';
-        });
-
-        navItem.addEventListener('mouseout', () => {
-            navbarOverlay.classList.remove('active');
-        });
-    });
-
-</script>
 @endpush
