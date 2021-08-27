@@ -52,8 +52,10 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            once: true
-        });
+            once: true,
+            offset: 120,
+        }); 
+        window.addEventListener('load', AOS.refresh);
 
     </script>
 

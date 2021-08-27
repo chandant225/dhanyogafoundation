@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-frontend.partials.primary-image-slider />
 
-    <div class="container mx-auto py-16 px-4">
+    <div class="container mx-auto py-5 px-4">
         <div class="mb-4">
             <h1 class="italic text-3xl md:text-4xl text-center text-primary font-semibold tracking-wide">{{ __('DYF lifting up the rural community') }}</h1>
         </div>

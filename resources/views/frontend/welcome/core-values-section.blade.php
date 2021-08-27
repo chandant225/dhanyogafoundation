@@ -1,9 +1,9 @@
 <div class="py-5 px-4">
     <div class="group">
         <h1 class="text-3xl sm:text-4xl md:text-5xl text-center text-primary font-semibold tracking-wide">Core Values</h1>
-        <div class="h-1 w-32 bg-primary mx-auto rounded-full mt-5 mb-8 group-hover:w-96 group-hover:bg-secondary transition-all linear duration-300"></div>
+        <div class="h-1 w-32 bg-primary mx-auto rounded-full mt-5 mb-8 group-hover:w-64 group-hover:bg-secondary transition-all linear duration-300"></div>
     </div>
-    <div class="py-10 max-w-screen-md mx-auto">
+    <div class="pb-10 max-w-screen-md mx-auto">
         <x-frontend.partials.squeeze-box>
             <x-slot name="title">
                 <span class="text-xl sm:text-2xl md:text-4xl ">R</span>espect

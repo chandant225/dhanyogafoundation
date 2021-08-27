@@ -1,27 +1,32 @@
     <div class="primary-image-slider owl-carousel">
         @foreach ($slides as $slide)
         <div class="primary-image-slide">
-            <div class="relative" style="background-image: url({{ $slide->image_url }}); background-size: cover; min-height: 690px;">
-                <div class="backdrop-filter backdrop-brightness-90 absolute w-full h-full p-5 flex items-center justify-center">
-                    <div class="text-center">
-                        <section class="text-white">
-                            <h1 class="text-4xl md:text-5xl my-4 font-semibold tracking-wide">{{ $slide->title }}</h1>
-                            @if($slide->description)
-                            <p class="tracking-wide">
-                                {{ $slide->description }}
-                            </p>
-                            @endif
-                            <div class="mt-5" data-aos="fade-up">
-                                @if ($slide->action_link)
-                                <a class="py-2 px-5 border-2 border-primary bg-primary text-white uppercase hover:bg-white hover:text-primary sm:mr-3" href="{{ $slide->action_link }}" @if($slide->open_in_new_tab) target="_blank" @endif>{{ $slide->action_button_text ?? 'Donate' }}</a>
+            <div class="relative">
+                <div class="aspect-w-16 aspect-h-9">
+                    <img class="h-full w-full object-center" src="{{ $slide->image_url }}" alt="{{ $slide->title }}">
+                </div>
+                <div class="absolute bottom-0 md:bottom-48 left-0 md:left-5 w-full z-10">
+                    <div class="w-full lg:w-1/3 py-6 md:py-16 px-5 bg-primary bg-opacity-90 rounded-lg hover:bg-opacity-100">
+                        <div class="text-center">
+                            <section class="text-white gray-700">
+                                <h1 class="text-xl md:text-3xl mb-2 md:mb-4 font-bold tracking-wide">{{ $slide->title }}</h1>
+                                @if($slide->description)
+                                <p class="tracking-wide hidden md:block">
+                                    {{ $slide->description }}
+                                </p>
                                 @endif
-                                <a class="py-2 px-5 border-2 border-secondary bg-secondary text-white uppercase hover:bg-white hover:text-secondary" href="{{ route('vacancy.index') }}">VOLUNTEER</a>
-                            </div>
-                        </section>
+                                <div class="mt-5">
+                                    @if ($slide->action_link)
+                                    <a class="inline-block py-2 px-4 md:px-6 border-2 border-white bg-wwhite text-white text-sm uppercase hover:bg-white hover:text-primary tracking-wider font-semibold rounded-full sm:mr-3" href="{{ $slide->action_link }}" @if($slide->open_in_new_tab) target="_blank" @endif>{{ $slide->action_button_text ?? 'Donate' }}</a>
+                                    @endif
+                                    <a class="inline-block py-2 px-4 md:px-6 border-2 border-secondary bg-secondary text-white text-sm uppercase hover:bg-white hover:text-secondary tracking-wider font-semibold rounded-full" href="{{ route('vacancy.index') }}">VOLUNTEER</a>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
                 {{-- Waves --}}
-                <div class=" absolute bottom-0 w-full">
+                <div class="hidden md:block absolute bottom-0 w-full">
                     <svg class="w-full h-32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                         <defs>
                             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>

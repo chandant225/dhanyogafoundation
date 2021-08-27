@@ -2,7 +2,7 @@
 <header>
     <div id="navbar-overlay" class="fixed bg-blue-50 opacity-0 rounded transition-all duration-300"></div>
     <div class="container mx-auto flex justify-between items-center py-3 px-2 lg:px-6" x-data="{ show: false }">
-        <a class="navbar-brand logo" href="{{ url('/') }}">
+        <a class="navbar-brand logo ml-16 sm:ml-0" href="{{ url('/') }}">
             <img class="h-12 sm:h-16" src="{{ siteLogoUrl() }}" alt="{{ siteName() }}">
         </a>
         <button class="md:hidden text-gray-700" type="button" @click="show = !show" x-cloak>
